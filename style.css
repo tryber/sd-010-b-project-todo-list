@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin-bottom: 2rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 400px;
+  margin-top: 4rem;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inputs {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+}
+
+.btns {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+button {
+  margin: 3px;
+}
+
+li {
+  text-align: left;
+  margin-left: 380px;
+}
+
+.completed {
+  text-decoration: line-through solid black;
+}
+
+.delete {
+  display: none;
+}
+
+ol {
+  margin-left: -100px;
+  margin-top: 30px;
+}
