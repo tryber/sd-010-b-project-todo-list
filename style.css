@@ -1,0 +1,88 @@
+body {
+  background-color: rgb(26 , 95 , 116);
+  font-family: Roboto, sans-serif;
+  font-size: 15px;
+  line-height: 1.58em;
+  color: rgb(34 , 38 , 42);
+  text-align: center;
+}
+
+header {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+button {
+  border-radius: 10px;
+  border-style: none;
+  background-color: rgb(26 , 137 , 211);
+  color: white;
+  padding: 3px 15px;
+}
+
+button:hover {
+  background-color: rgb(80 , 170 , 230);
+}
+
+button:active {
+  color: black;
+}
+
+main {
+  background-color: whitesmoke;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+li {
+  border-radius: 15px;
+}
+
+.list-container {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.selected {
+  background-color: grey;
+
+}
+
+.completed {
+  text-decoration: line-through solid black;
+}
+
+p {
+  color: grey;
+}
+
+.arrow {
+  background-color: rgb(230 , 165 , 44);
+}
+
+.arrow:hover {
+  background-color: rgb(247 , 194 , 95);
+}
+
+#remover-selecionado {
+  background-color: rgb(197 , 53 , 53);
+}
+
+#remover-selecionado:hover {
+  background-color: rgb(231 , 91 , 91);
+}
+
+li:hover {
+  background-color: lightgray;
+}
+
+input:focus {
+  background-color: rgb(220 , 236 , 247);
+}
+
+label {
+  font-size: 14px;
+  margin-left: 90%;
+  color: grey;
+}

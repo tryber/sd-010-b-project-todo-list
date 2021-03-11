@@ -1,0 +1,89 @@
+body {
+  background-color: rgb(32 , 33 , 36);
+  font-family: Roboto, sans-serif;
+  font-size: 15px;
+  line-height: 1.58em;
+  color: rgb(138 , 180 , 248);
+  text-align: center;
+}
+
+header {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+button {
+  border-radius: 10px;
+  border-style: none;
+  background-color: rgb(138 , 180 , 248);
+  color: rgb(32 , 33 , 36);
+  padding: 3px 15px;
+}
+
+button:hover {
+  background-color: rgb(168 , 198 , 247);
+}
+
+button:active {
+  color: black;
+}
+
+main {
+  background-color: rgb(50 , 52 , 56);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+li {
+  border-radius: 15px;
+}
+
+.list-container {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.selected {
+  background-color: grey;
+
+}
+
+.completed {
+  text-decoration: line-through solid black;
+}
+
+p {
+  color: grey;
+}
+
+.arrow {
+  background-color: rgb(230 , 165 , 44);
+}
+
+.arrow:hover {
+  background-color: rgb(247 , 194 , 95);
+}
+
+#remover-selecionado {
+  background-color: rgb(197 , 53 , 53);
+}
+
+#remover-selecionado:hover {
+  background-color: rgb(231 , 91 , 91);
+}
+
+li:hover {
+  background-color: lightgray;
+}
+
+input:focus {
+  background-color: rgb(220 , 236 , 247);
+}
+
+label {
+  font-size: 14px;
+  margin-left: 90%;
+  color: grey;
+}
+
