@@ -1,0 +1,59 @@
+body {
+  background-color: darkcyan;
+}
+
+#central {
+  margin: 30px;
+  padding: 10px;
+  background-color: white;
+}
+
+.bnt-funcion {
+  margin-right: 5px;
+  height: 30px;
+  padding: 9px;
+  border: none;
+  color: white;
+}
+
+#criar-tarefa {
+  width: 165px;
+  height: 30px;
+  background-color: teal;
+  padding: 9px;
+  border: none;
+  color: white;
+}
+
+#remover-finalizados {
+  background-color: teal;
+}
+
+#apaga-tudo {
+  background-color: red;
+}
+
+#salvar-tarefas {
+  background-color: green;
+}
+
+#texto-tarefa {
+  height: 25px;
+}
+
+.cinza {
+  background-color: gray;
+}
+
+.completed {
+  text-decoration: line-through solid black;
+}
+
+.bnt-funcion {
+  margin-right: 15px;
+  height: 30px;
+
+  padding: 9px;
+  border: none;
+  color: white;
+}
