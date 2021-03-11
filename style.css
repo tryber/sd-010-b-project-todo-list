@@ -1,0 +1,33 @@
+body {
+
+}
+
+#funcionamento {
+  font-size: smaller;
+  text-decoration: lightgray;
+}
+
+#texto-tarefa {
+  border-width: 1px;
+  border: solid;
+}
+
+#lista-tarefas {
+  background-color: white;
+}
+
+#criar-tarefas {
+  border: solid;
+}
+
+.task {
+  background-color: white;
+}
+
+.selected {
+  background-color: gray;
+}
+
+.completed {
+  text-decoration: line-through;
+}
