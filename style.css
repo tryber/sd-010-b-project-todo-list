@@ -1,0 +1,26 @@
+header {
+  width: auto;
+  text-align: center;
+}
+
+ol {
+  list-style-position: inside;
+  padding: 0;
+}
+
+button {
+  margin: 5px;
+}
+
+.selected {
+  background-color: gray;
+}
+
+.completed {
+  text-decoration: line-through solid black;
+}
+
+.arrow {
+  font-size: 1.3em;
+  width: 1.3em;
+}
