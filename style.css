@@ -1,0 +1,191 @@
+body {
+  background-color: rgb(206 , 206 , 53);
+  padding: 10px;
+  font-size: 20px;
+}
+
+main {
+  background-color: rgb(103 , 115 , 192);
+  border: 50px;
+  border-radius: 30px;
+}
+
+header {
+  padding: 10px;
+  margin-left: 20px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin-top: 10px;
+  font-style: italic;
+}
+
+section {
+  padding: 10px;
+  margin-left: 20px;
+  padding-bottom: 20px;
+}
+
+footer {
+  margin-bottom: 20px;
+}
+
+#texto-tarefa {
+  border-radius: 4px;
+  display: inline-block;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  padding: 3px 5px;
+  text-decoration: none;
+}
+
+.btnAdd {
+  border: 1px solid;
+  font-weight: 700;
+  border-color: rgb(70 , 167 , 245);
+  border-radius: 10px;
+  background: linear-gradient(rgb(134 , 198 , 248) 5% , rgb(70 , 167 , 245) 100%);
+  box-shadow: inset 1px rgb(215 , 236 , 253);
+  display: inline-block;
+  cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  padding: 4px 6px;
+  text-decoration: none;
+  color: black;
+}
+
+.btnAdd:hover {
+  background: linear-gradient(rgb(70 , 167 , 245) 5% , rgb(134 , 198 , 248) 100%);
+}
+
+.btnDel {
+  border: 1px solid;
+  font-style: oblique;
+  font-weight: 900;
+  border-color: rgb(246 , 31 , 14);
+  border-radius: 4px;
+  background: linear-gradient(rgb(252 , 169 , 161) 5% , rgb(246 , 31 , 14) 100%);
+  box-shadow: inset 1px rgb(215 , 236 , 253);
+  display: inline-block;
+  cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  padding: 4px 6px;
+  text-decoration: none;
+  color: black;
+  margin-left: 10px;
+}
+
+.btnDel:hover {
+  background: linear-gradient(rgb(246 , 31 , 14) 5% , rgb(252 , 168 , 161) 100%);
+}
+
+.btnCmp {
+  border: 1px solid;
+  font-weight: 900;
+  border-color: rgb(22 , 115 , 192);
+  border-radius: 4px;
+  background: linear-gradient(rgb(66 , 134 , 185) 5% , rgb(22 , 115 , 192) 100%);
+  box-shadow: inset 1px rgb(215 , 236 , 253);
+  display: inline-block;
+  cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  padding: 4px 6px;
+  text-decoration: none;
+  color: black;
+  margin-left: 10px;
+}
+
+.btnCmp:hover {
+  background: linear-gradient(rgb(22 , 115 , 192) 5% , rgb(66 , 134 , 185) 100%);
+}
+
+.btnSav {
+  border: 1px solid;
+  font-weight: 900;
+  border-color: rgb(27 , 151 , 10);
+  border-radius: 4px;
+  background: linear-gradient(rgb(100 , 173 , 90) 5% , rgb(27 , 151 , 10) 100%);
+  box-shadow: inset 1px rgb(215 , 236 , 253);
+  display: inline-block;
+  cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  padding: 4px 6px;
+  text-decoration: none;
+  color: black;
+  margin-left: 10px;
+}
+
+.btnSav:hover {
+  background: linear-gradient(rgb(27 , 151 , 10) 5% , rgb(100 , 173 , 90) 100%);
+}
+
+.btnUp {
+  border: 1px solid;
+  font-weight: 900;
+  border-color: rgb(150 , 75 , 14);
+  border-radius: 4px;
+  background: linear-gradient(rgb(78 , 40 , 8) 5% , rgb(150 , 75 , 14) 100%);
+  box-shadow: inset 1px rgb(215 , 236 , 253);
+  display: inline-block;
+  cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  padding: 4px 6px;
+  text-decoration: none;
+  color: black;
+  margin-left: 10px;
+}
+
+.btnUp:hover {
+  background: linear-gradient(rgb(150 , 75 , 14) 5% , rgb(78 , 40 , 8) 100%);
+}
+
+.btnDown {
+  border: 1px solid;
+  font-weight: 900;
+  border-color: rgb(150 , 75 , 14);
+  border-radius: 4px;
+  background: linear-gradient(rgb(78 , 40 , 8) 5% , rgb(150 , 75 , 14) 100%);
+  box-shadow: inset 1px rgb(215 , 236 , 253);
+  display: inline-block;
+  cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  padding: 4px 6px;
+  text-decoration: none;
+  color: black;
+  margin-left: 10px;
+}
+
+.btnDown:hover {
+  background: linear-gradient(rgb(150 , 75 , 14) 5% , rgb(78 , 40 , 8) 100%);
+}
+
+.btnRmv {
+  border: 1px solid;
+  font-weight: 900;
+  border-color: rgb(246 , 31 , 14);
+  border-radius: 4px;
+  background: linear-gradient(rgb(252 , 169 , 161) 5% , rgb(246 , 31 , 14) 100%);
+  box-shadow: inset 1px rgb(215 , 236 , 253);
+  display: inline-block;
+  cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  padding: 4px 6px;
+  text-decoration: none;
+  color: black;
+  margin-left: 10px;
+}
+
+.btnRmv:hover {
+  background: linear-gradient(rgb(246 , 31 , 14) 5% , rgb(252 , 168 , 161) 100%);
+}
