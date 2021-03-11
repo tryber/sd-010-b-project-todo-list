@@ -1,0 +1,12 @@
+button {
+  width: 70px;
+  height: 30px;
+}
+
+.completed {
+  text-decoration: line-through solid black;
+}
+
+#remover-finalizados,#remover-selecionado {
+  width: 200px;
+}
