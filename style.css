@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+  margin: 25px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  text-align: center;
+}
+
+.input-text {
+  margin: 25px;
+}
+
+#lista-tarefas {
+  list-style: decimal inside;
+  margin: 25px;
+}
+
+.list {
+  cursor: pointer;
+}
+
+.selected {
+  background-color: rgb(128 , 128 , 128);
+}
+
+.completed {
+  text-decoration: line-through solid rgb(0 , 0 , 0);
+}
