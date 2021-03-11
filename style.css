@@ -1,0 +1,27 @@
+.title {
+  font-family: monospace;
+  text-align: justify;
+  text-decoration-style: solid;
+}
+
+#funcionamento {
+  font-family: Arial, Helvetica, sans-serif;
+  color: grey;
+}
+
+#texto-tarefa {
+  width: 15%;
+  margin-left: 5px;
+  border: 2px dashed black;
+}
+
+#lista-tarefas {
+  /*coisas a serem digitadas*/
+}
+
+.selected {
+  background-color: rgb(128, 128, 128);
+}
+.completed {
+  text-decoration: line-through solid rgb(0, 0, 0);
+}
