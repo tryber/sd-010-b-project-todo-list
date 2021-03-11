@@ -1,0 +1,21 @@
+button {
+  margin: 20px;
+}
+
+#btn-add {
+  margin: 0;
+}
+
+.input-container {
+  width: 49%;
+  height: 100px;
+  display: inline-block;
+}
+
+input {
+  margin-top: 8px;
+}
+
+.completed {
+  text-decoration: line-through solid black;
+}
