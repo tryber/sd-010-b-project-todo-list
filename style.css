@@ -1,0 +1,16 @@
+ol {
+  cursor: pointer;
+  user-select: none;
+}
+
+#otherButtons button {
+  margin-right: 20px;
+}
+
+.selected {
+  background-color: gray;
+}
+
+.completed {
+  text-decoration: line-through solid black;
+}
