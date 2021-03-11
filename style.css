@@ -1,0 +1,20 @@
+* {
+  max-width: 1366px;
+  max-height: 768px;
+  background-color: bisque;
+}
+
+button {
+  width: auto;
+  height: 25px;
+  background-color: darkcyan;
+  color: antiquewhite;
+  font-weight: 600;
+}
+
+.selected {
+  background-color: rgb( 128 , 128 , 128);
+}
+.completed {
+  text-decoration: line-through;
+}
