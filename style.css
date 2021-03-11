@@ -1,0 +1,36 @@
+body {
+  background-color: silver;
+  padding: 10px;
+  margin: 10px;
+}
+
+header {
+  font-size: 20px;
+}
+
+p {
+  font-family: Roboto, sans-serif;
+}
+
+.completed {
+  text-decoration: line-through solid black;
+}
+
+.cinca {
+  background-color: gray;
+}
+
+button {
+  margin: 1px;
+  background-color: rebeccapurple;
+  font-size: 14px;
+}
+
+button:hover {
+  border: 2px black solid;
+  cursor: pointer;
+}
+
+li:hover {
+  cursor: pointer;
+}

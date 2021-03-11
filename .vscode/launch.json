@@ -1,0 +1,10 @@
+{
+  "configurations": [
+    {
+      "type": "pwa-chrome",
+      "name": "http://addClass",
+      "request": "launch",
+      "url": "http://addClass"
+    }
+  ]
+}
