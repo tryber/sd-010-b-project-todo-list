@@ -52,7 +52,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
 - Manipular Javascript
 
---- 
+---
 
 ## O que deverá ser desenvolvido
 
@@ -366,3 +366,17 @@ Link: [FORMULÁRIO DE AVALIAÇÃO DE PROJETO](https://bit.ly/3ta7hA0)
 O avaliador automático não necessariamente avalia seu projeto na ordem em que os requisitos aparecem no readme. Isso acontece para deixar o processo de avaliação mais rápido. Então, não se assuste se isso acontecer, ok?
 
 ---
+Local Storage:
+	Para adicionar alguma chave/valor ao local Storage:
+	localStorage.setItem("chave", "valor");
+	ou
+	localStorage.chave = valor;
+
+	para recuperar esta chave valor podemos fazer da seguinte maneira:
+
+		let salvar = "Vamos salvar esta frase";
+		localStorage.chave = salvar;
+
+	window.onload = () => {
+		salvar = localStorage.chave;
+	}
