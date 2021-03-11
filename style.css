@@ -1,0 +1,97 @@
+html {
+  background-color: #6d7577;
+}
+
+body {
+  margin: 20px;
+  background-color: #dfd9d7;
+  padding: 20px;
+  border-radius: 7px;
+}
+
+header {
+  font-size: xxx-large;  
+}
+
+li {
+  font-size: 1.3em;
+  margin: 3px;
+}
+
+#funcionamento {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: larger;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+button {
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin: 0 20px;
+  color: white;
+}
+
+#apaga-tudo {
+  background-color: #E13636;
+}
+
+#apaga-tudo:hover {
+  background-color: #a02323;
+}
+
+#remover-finalizados {
+  background-color: #e9dd35;
+}
+
+#remover-finalizados:hover {
+  background-color: #837d25;
+}
+
+#salvar-tarefas {
+  background-color: #3bbb35;
+}
+
+#salvar-tarefas:hover {
+  background-color: #226e1e;
+}
+
+.selected {
+  background-color: rgb(128, 128, 128);
+}
+
+#remover-selecionado {
+  background-color: #782553;
+}
+
+#remover-selecionado:hover {
+  background-color: #4b1733;
+
+}
+
+#mover-cima {
+  background-color: #3da3d6;
+}
+
+#mover-cima:hover {
+  background-color: #1f5069;
+}
+
+#mover-baixo {
+  background-color: #F5772D;
+}
+
+#mover-baixo:hover{
+  background-color: #8b451d;
+}
+
+#criar-tarefa {
+  background-color: black;
+}
+
+#criar-tarefa:hover {
+  background-color: rgba(0, 0, 0, 0.425);
+}
