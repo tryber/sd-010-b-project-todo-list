@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>To Do List</title>
+  </head>
+  <body>
+    <header>
+      <h1>Minha Lista de Tarefas</h1>
+      <p id="funcionamento">
+        Clique duas vezes em um item para marcá-lo como completo
+      </p>
+    </header>
+    <div class="note-container">
+      <main class="note">
+        <div class="buttons_container">
+          <button id="remover-selecionado">
+            <img src="./images/delete.svg" alt="excluir item selecionado" />
+          </button>
+          <button id="mover-cima">
+            <img src="./images/up.png" alt="move selected up" />
+          </button>
+          <button id="mover-baixo">
+            <img src="./images/down.png" alt="move selected down" />
+          </button>
+          <button class="normal-btn" id="remover-finalizados">
+            Limpar Completos
+          </button>
+          <button class="normal-btn" id="apaga-tudo">Limpar Lista</button>
+          <button class="normal-btn" id="salvar-tarefas">Salvar</button>
+        </div>
+        <div class="input_container">
+          <input id="texto-tarefa" type="text" />
+          <button class="normal-btn" id="criar-tarefa">Adicionar</button>
+        </div>
+        <section>
+          <ol id="lista-tarefas"></ol>
+        </section>
+      </main>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
