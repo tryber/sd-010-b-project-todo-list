@@ -1,0 +1,33 @@
+.gray {
+  background-color: rgb(128, 128, 128);
+}
+
+.completed {
+  text-decoration: line-through solid black;
+}
+
+main {
+  width: 600px;
+  margin-left: 350px;
+  margin-top: 2px;
+  border: 5px solid black;
+  border-radius: 50px;
+  text-align: center;
+  padding: 200px;
+  background-color: #0a8d99;
+}
+
+Input, button {
+  background-color: white;
+  color: black;
+  font-weight: bolder;
+}
+
+h1, p {
+  font-weight: bolder;
+}
+
+body {
+  background-color: chocolate;
+  padding: 80px;
+}
