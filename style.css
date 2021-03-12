@@ -1,0 +1,13 @@
+.cinza {
+  background-color: green;
+};
+
+.completed {
+  text-decoration-line: line-through;
+}
+
+
+button{
+    cursor: pointer;
+}
+
