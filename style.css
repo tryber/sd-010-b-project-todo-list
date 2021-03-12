@@ -1,0 +1,26 @@
+h1 {
+  font-style: italic;
+  color: rgb(42, 139, 168);
+}
+#funcionamento {
+  color: rgb(168, 162, 162);
+}
+#criar-tarefa,
+#remover-finalizados,
+#apaga-tudo {
+  background-color: aqua;
+  border-radius: 20px;
+  border-color: rgb(54, 124, 124);
+  font-size: 17px;
+  font-family: fantasy;
+}
+#texto-tarefa {
+  border-color: lightseagreen;
+}
+.cinza {
+  background-color: rgb(128, 128, 128);
+}
+.completed {
+  text-decoration: line-through;
+  /*https://www.horadecodar.com.br/2020/01/08/como-riscar-uma-palavra-com-css*/
+}
