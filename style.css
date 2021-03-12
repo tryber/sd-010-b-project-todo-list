@@ -1,0 +1,53 @@
+* {
+  font-family: fantasy;
+}
+
+header {
+  margin: 15px;
+}
+
+#funcionamento {
+  margin: 10px;
+}
+
+#texto-tarefa {
+  display: flex;
+  margin-left: 10px;
+}
+
+.tarefas {
+  display: inline-flex;
+  align-items: flex-end; 
+}
+
+#criar-tarefa {
+  margin-left: 5px;
+  background-color: cyan;
+  font-family: fantasy;
+  font-size: small;
+  font-weight: bold;
+}
+
+.selected {
+  background-color: rgb(128, 128, 128);
+}
+
+.completed {
+  text-decoration: line-through solid rgb(0, 0, 0);
+}
+
+#apaga-tudo {
+  margin-left: 5px;
+  background-color: rgb(241, 158, 119);
+  font-family: fantasy;
+  font-size: small;
+  font-weight: bold;
+}
+
+#remover-finalizados {
+  margin-left: 5px;
+  background-color: rgb(177, 250, 177);
+  font-family: fantasy;
+  font-size: small;
+  font-weight: bold;
+}
