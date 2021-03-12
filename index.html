@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <title>Todo List</title>
+</head>
+<body>
+  <header>
+    <h1>Minha Lista de Tarefas</h1>
+    <p id="funcionamento">Clique duas vezes em um item para marcá-lo como completo</p>
+  </header>
+
+  <section>
+    <div class="buttons">
+      <div class="insert-task">
+        <input type="text" id="texto-tarefa">
+        <button id="criar-tarefa"><img src="/img/add.png" alt="add tarefa">Criar tarefa</button>
+      </div>
+
+      <div class="option-buttons">
+        <button id="mover-cima"><img src="/img/up-arrow.png" alt="Mover cima"></button>
+  
+        <button id="mover-baixo"><img src="/img/down-arrow.png" alt="Mover baixo"></button>
+  
+        <button id="remover-finalizados">Limpar Finalizados</button>
+
+        <button id="remover-selecionado">Remover Selecionado</button>
+
+        <button id="apaga-tudo"><img src="/img/limpar-lista.png" alt="Apagar tudo"></button>
+  
+        <button id="salvar-tarefas"><img src="/img/save.png" alt="Salvar lista"></button>
+  
+      </div>
+    </div>
+
+    <ol id="lista-tarefas">
+    </ol>
+  </section>
+
+  <script src="/script.js"></script>
+</body>
+</html>
