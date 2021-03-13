@@ -1,0 +1,35 @@
+body {
+  background-color: lightyellow;
+}
+
+#page-title {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+}
+
+#funcionamento {
+  text-align: center;
+  font-style: italic;
+}
+
+#center-input {
+  text-align: center;
+}
+
+#lista-tarefas {
+  margin-top: 30px;
+  text-align: left;
+}
+
+li {
+  line-height: 28px;
+}
+
+.rgb-cinza {
+  background-color: rgb(128, 128, 128);
+}
+
+.completed {
+  text-decoration: line-through solid rgb(0, 0, 0);
+}
