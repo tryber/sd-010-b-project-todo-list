@@ -1,0 +1,30 @@
+body {
+  background-color: goldenrod;
+  font-family: Courier;
+}
+h1 {
+  text-align: center;
+}
+p {
+  color: rgb(93, 187, 155);
+}
+section {
+  background-color: honeydew;
+  width: 60%;
+  border-radius: 20px;
+  padding: 5px;
+  margin: 2% 5%;
+}
+#criar-tarefa , #apaga-tudo , #remover-finalizados , #salvar-tarefas {
+  background-color: antiquewhite;
+  border-radius: 5px;
+  padding: 3px;
+  margin-left: 10px;
+}
+#criar-tarefa:hover , #apaga-tudo:hover,
+#remover-finalizados:hover , #salvar-tarefas:hover {
+  background-color: aquamarine;
+}
+.selecionada { background-color: grey; }
+
+.completed { text-decoration: line-through solid black; }
