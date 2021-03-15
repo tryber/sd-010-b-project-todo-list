@@ -1,0 +1,22 @@
+.button {
+    color: black;
+    background-color:cadetblue;
+    padding: 15px 30px;
+    border-radius: 4px;
+    font-size: 20px;
+    line-height: 10px;
+    font-weight: 400;
+    margin-left: 200px;
+    }
+
+.whatToDo {
+    width: auto;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.notCompleted {
+    text-decoration: none;
+}
