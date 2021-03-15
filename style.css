@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+#lista-tarefas, p, header {
+  background-color: darkgreen;
+  width: 500px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  text-align: center;
+  list-style-type: none;
+}
+
+p {
+  margin-top: 0;
+}
+
+#container {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+ol li {
+  background-color: white;
+  border-bottom: solid 1px black;
+}
+
+.selected {
+  background-color:rgb(128, 128, 128);
+  border-bottom: solid 1px black;
+}
+
+.completed {
+  text-decoration: line-through solid rgb(0, 0, 0);
+}
