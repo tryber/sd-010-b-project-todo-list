@@ -1,0 +1,7 @@
+.corCinza {
+  background-color: rgba( 128 , 128 , 128);
+}
+
+.completed {
+  text-decoration: line-through solid rgba( 0 , 0 , 0);
+}
