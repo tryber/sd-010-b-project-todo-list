@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>TO DO LIST</title>
+</head>
+<body>
+  <main>
+    <header>
+      <h1 id="header">Minha Lista de Tarefas</h1>
+    </header>
+      <p id="funcionamento">
+        Clique duas vezes em um item para marcá-lo como completo.
+      </p>
+    <div id="container-input">
+      <input id="texto-tarefa" type="text">
+      <button id="criar-tarefa">Adicionar</button>
+    </div>
+    <ol id="lista-tarefas"></ol>
+    <div id="container-buttons">
+      <button class="fa fa-times" id="remover-selecionado" ></button>
+      <button id="mover-cima" class="fa fa-chevron-circle-up"></button>
+      <button id="mover-baixo" class="fa fa-chevron-circle-down"></button>
+      <button id="remover-finalizados">Apagar Finalizadas</button>
+      <button id="salvar-tarefas">Salvar Lista</button>
+      <button id="apaga-tudo">Apagar Lista</button>
+    </div>
+  </main>
+  <div id="adiciona-espaco"></div>
+  <footer>
+    <p>Aladino Borges, 2021. Todos os direitos reservados.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
