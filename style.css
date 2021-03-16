@@ -1,0 +1,32 @@
+* {
+  font-family: 'Handlee';
+  font-size: 20px;
+  background-color: #CDD7D6;
+}
+
+header {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  color: #102542;
+}
+
+p {
+  text-align: center;
+}
+
+.buttons {
+  border-radius: 10%;
+  background-color: #F87060;
+  color: #102542;
+  text-align: center;
+  margin: auto;
+  font-weight: bold;
+}
+.color {
+  background-color: rgb(128, 128, 128);
+}
+
+.completed {
+  text-decoration: line-through solid rgb(0, 0, 0);
+}
