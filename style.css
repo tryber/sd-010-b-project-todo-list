@@ -1,0 +1,39 @@
+#body {
+  background-color: rgb(124, 135, 184);
+  border-radius: 10px;
+  color: white;
+  margin: auto;
+  max-width: 800px;
+  width: 100%;
+  height: 445px;
+}
+
+h1 {
+  margin-left: 245px;
+  margin-top: 50px;
+}
+
+#funcionamento {
+  margin-left: 202px;
+}
+
+#texto-tarefa {
+  margin-left: 200px;
+  width: 390px;
+}
+
+#btns {
+  margin-left: 220px;
+}
+
+#taskList{
+  margin-left: 300px;
+}
+
+.itemSelected {
+  background-color: rgb(128, 128, 128)
+}
+
+.completed {
+  text-decoration: line-through solid rgb(0, 0, 0);
+} 
