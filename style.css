@@ -1,0 +1,111 @@
+body {
+  background-color: rgb(80 , 4 , 4);
+}
+
+main {
+  width: 40%;
+  min-width: 400px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: white;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.titulo {
+  padding: 0 10px;
+  background-color: yellow;
+  font-family: Caveat, cursive;
+  font-size: 60px;
+}
+
+#funcionamento {
+  font-style: italic;
+}
+
+#texto-tarefa {
+  outline: none;
+}
+
+.tarefa {
+  cursor: pointer;
+  border-bottom: 1px solid lightskyblue;
+  font-family: Caveat, cursive;
+  font-size: 36px;
+}
+
+.completed {
+  text-decoration: line-through solid black;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-column-gap: 10px;
+  min-height: 50px;
+  margin-top: 80px;
+}
+
+button {
+  outline: none;
+  border-radius: 2px;
+  background-image: linear-gradient(to bottom right ,
+  rgba(255 , 255 , 255 , 0.3) , rgba(255 , 255 , 255 , 0));
+  font-family: Quicksand, sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#criar-tarefa {
+  padding: 1px;
+  border: 2px solid black;
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+#remover-selecionado {
+  border: 2px solid darkred;
+  background-color: darkred;
+  color: white;
+}
+
+#mover-cima , #mover-baixo {
+  border: 2px solid black;
+  background-color: black;
+  color: white;
+}
+
+#salvar-tarefas , #remover-finalizados , #apaga-tudo {
+  border: 2px solid black;
+  transition-duration: 0.25s;
+}
+
+#salvar-tarefas:hover {
+  border: 2px solid darkgreen;
+  background-color: darkgreen;
+  color: white;
+  font-weight: 700;
+}
+
+#remover-finalizados:hover {
+  border: 2px solid darkblue;
+  background-color: darkblue;
+  color: white;
+  font-weight: 700;
+}
+
+#apaga-tudo:hover {
+  border: 2px solid darkred;
+  background-color: darkred;
+  color: white;
+  font-weight: 700;
+}
+
