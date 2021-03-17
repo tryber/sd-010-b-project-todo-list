@@ -1,0 +1,31 @@
+.center {
+  text-align: center;
+}
+
+.headings {
+  margin: 25px 10px 10px;
+}
+
+.data {
+  margin-top: 30px;
+}
+
+ol {
+  width: 30%;
+  margin-left: 43%;
+}
+
+ol li {
+  margin: 0;
+  font-size: 20px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: gray;
+}
+
+.completed {
+  text-decoration: line-through;
+}
