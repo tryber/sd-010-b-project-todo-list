@@ -1,0 +1,35 @@
+body {
+  background-color: green;
+}
+
+main {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  background-color: white;
+  width: 60%;
+  border-radius: 20px;
+  padding: 50px;
+}
+
+h1 {
+  font-family: monospace, cursive;
+}
+
+p {
+  font-style: italic;
+  color: grey;
+}
+
+button {
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px;
+}
+
+.completed {
+  text-decoration: line-through solid black;
+}
+
+.selected {
+  background-color: gray;
+}
