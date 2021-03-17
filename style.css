@@ -1,0 +1,52 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: green;
+}
+
+main {
+  background-color: white;
+}
+
+p {
+  font-style: italic;
+  color: grey;
+}
+
+body , main , h1 , p {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+body , main {
+  width: 100%;
+}
+
+header , p {
+  margin: 10px auto;
+  border: 0;
+  padding: 0;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+}
+
+#texto-tarefa {
+  font-size: x-large;
+  min-inline-size: 40%;
+}
+
+#criar-tarefa {
+  padding: 5px 30px;
+  font-size: large;
+  border-radius: 20px;
+}
+
+.task {
+  padding: 5px;
+}
+
+.completed {
+  text-decoration: line-through;
+}
