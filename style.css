@@ -1,0 +1,7 @@
+.cinza {
+  background: rgb(128, 128, 128);
+}
+
+.completed {
+  text-decoration: line-through;
+}
