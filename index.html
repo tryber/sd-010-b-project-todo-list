@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="/style.css">
+  <title>Document</title>
+</head>
+<body class="bg-light">
+  <div class="d-flex p-2 bd-highlight ">
+    <div class="d-flex flex-column justify-content-center size-panel position-panel my-3 p-3 bg-body rounded shadow-sm">
+      <div class="d-flex flex-column align-items-center p-2 bd-highlight">
+        <header>
+          <h1 class="text-center">Minha Lista de Tarefas</h1>
+          <p id="funcionamento" class="text-center fst-italic">Clique duas vezes em um item para marcá-lo como completo</p>
+        </header>
+      
+        <section>
+          <section class="d-flex justify-content-center align-items-start text-center">
+            <div class="me-2">
+              <input type="text" id="texto-tarefa" class="form-control me-2">
+            </div>
+            <div>
+              <button id="criar-tarefa" class="btn btn-success">Criar Tarefas</button>
+            </div>
+          </section>
+          
+          <section class="d-flex justify-content-center">
+            <ol id="lista-tarefas" class="fw-light lh-lg list-group list-group-flush"></ol>
+          </section>
+      
+          <section>
+            <button id="remover-finalizados" class="btn btn-primary">Finalizar</button>
+            <button id="salvar-tarefas" class="btn btn-primary">Salvar</button>
+            <button id="mover-cima" class="btn btn-primary">Cima</button>
+            <button id="mover-baixo" class="btn btn-primary">Baixo</button>
+            <button id="remover-selecionado" class="btn btn-warning">Remover</button>
+            <button id="apaga-tudo" class="btn btn-danger">Limpar</button>
+          </section>
+            
+        </section>
+      </div>
+    </div>
+  </div>
+  
+  <script src="/script.js"></script>
+</body>
+</html>

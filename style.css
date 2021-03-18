@@ -1,0 +1,29 @@
+.selected {
+  background-color: gray;
+  color: white;
+  font-weight: 500;
+}
+
+#lista-tarefas {
+  width: 350px;
+  padding: 15px;
+}
+
+.tarefa {
+  list-style: none;
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through solid rgb(0, 0, 0);
+}
+
+.size-panel {
+  width: 550px;
+  min-height: 500px;
+  background-color: white;
+}
+
+.position-panel {
+  margin-left: 50px;
+}
