@@ -1,0 +1,42 @@
+#titulo {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: maroon;
+}
+
+#funcionamento {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: darkslategray;
+}
+
+#lista-tarefas {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: darkslategray;
+}
+
+.selected {
+  background-color: gray;
+}
+
+.completed {
+  text-decoration: line-through solid black;
+}
+
+#apaga-tudo {
+  color: white;
+  background-color: maroon;
+}
+
+#remover-finalizados {
+  color: white;
+  background-color: darkorange;
+}
+
+#salvar-tarefas {
+  color: white;
+  background-color: darkslateblue;
+}
+
+#remover-selecionado {
+  color: white;
+  background-color: teal;
+}
