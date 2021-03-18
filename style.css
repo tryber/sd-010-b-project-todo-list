@@ -1,0 +1,36 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+#title, #funcionamento {
+  text-align: center;
+  padding: 20px;
+  color: #484848;
+}
+
+#cd-tarefas {
+  text-align: center;
+}
+
+#texto-tarefa {
+  width: 200px;
+}
+
+.btn {
+  width: 100px;
+  padding: 3px;
+}
+
+#list-container {
+  padding: 60px;
+}
+
+.selected {
+  background-color: rgb(128, 128, 128);
+}
+
+.completed {
+  text-decoration: line-through solid rgb(0, 0, 0);
+
+}
