@@ -1,0 +1,28 @@
+body {
+  padding: 10px;
+  margin: 15px;
+  background-color: darkcyan;
+  color: rgb(57, 55, 80);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+h1 , p , label{
+  padding: 5px;
+  border: 1px solid rgb(57, 55, 80);
+  border-radius: 4px;
+  background-color: silver;
+  width: 100%;
+  text-align: center;
+}
+input , button {
+  margin: 5px;
+  border-radius: 4px;
+}
+
+input {
+  width: 200px;
+}
+
+.completed {
+  text-decoration: line-through solid rgb(0, 0, 0)
+}
