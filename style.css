@@ -1,0 +1,27 @@
+.selected {
+  background-color: #CBCDCB;
+}
+
+.completed {
+  text-decoration: line-through solid black;
+}
+body {
+  background-color: #189AB4;
+
+}
+header {
+  color: #f1f1f1;
+  text-align: center;
+  font-size: large;
+}
+.main-container{
+  display: flex;
+  justify-content: center;
+
+}
+.section-container {
+  width: 80%;
+  background-color: rgb(231, 231, 231);
+  padding: 30px;
+
+}
