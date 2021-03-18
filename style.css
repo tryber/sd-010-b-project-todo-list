@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eeebdd;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1em;
+  margin-left: 35%;
+  margin-top: 2%;
+  color: #161d6f;
+  justify-content: center;
+}
+
+.cabecalho {  
+  font-family: Arial, Helvetica, sans-serif;
+  color: #440a67;
+  margin: auto;
+  margin-bottom: 0.5em;  
+}
+
+.btn {
+  padding: 1px;
+}
+
+.tarefas {
+  margin-left: 2%;
+  margin-bottom: 2em;
+}
+
+.paintSelected {
+  background-color: rgb(128, 128, 128);
+}
+
+.completed {
+  text-decoration: line-through solid rgb(0, 0, 0);
+}
