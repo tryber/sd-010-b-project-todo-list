@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: ForestGreen;
+  color: black;
+}
+
+section {
+  background-color: white;
+  padding: 25px 25px 25px 25px;
+  margin: 25px 25px 25px 25px;
+  border-radius: 10px;
+}
+
+p {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+header {
+  padding-top: 2%;
+}
+
+button {
+  color: white;
+  border-radius: 15px;
+  padding: 8px;
+}
+
+#criar-tarefa{
+  background-color: RoyalBlue;
+}
+
+#cancelamento {
+  background-color: DarkRed;
+}
+
+#mover-cima {
+  background-color: OrangeRed;
+}
+
+#mover-baixo {
+  background-color: OrangeRed;
+}
+
+#apaga-tudo {
+  background-color: RoyalBlue;
+}
+
+#limpar-lista {
+  background-color: DarkRed;
+}
+
+#salvar-lista {
+  background-color: SpringGreen;
+}
+
+#botoes-baixos {
+  margin-right: 20px;
+  display: inline-block;
+}
+
+.completed{
+  text-decoration: line-through;
+}
+
+.selecionado {
+  background-color: rgb(128,128,128);
+}
