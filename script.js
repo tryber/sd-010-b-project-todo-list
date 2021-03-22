@@ -7,8 +7,8 @@ ordenalista.innerText = input.value;
 lista.appendChild(ordenalista);
 input.value = "";
 ordenalista.addEventListener('click', function(){
-ordenalista.style.backgroundColor = " rgb(128,128,128)";
+//ordenalista.style.backgroundColor = " rgb(128,128,128)";
 })
 })
 
-
+//teste
