@@ -1,13 +1,12 @@
+const botaoCriarTarefas = document.querySelector('#criar-tarefa');
+const botaoLimparTarefas = document.querySelector('#apaga-tudo');
+const botaoRemover = document.querySelector('#remover-finalizados');
+ 
+botaoCriarTarefas.addEventListener('click', criaTarefas);
+botaoLimparTarefas.addEventListener('click', limpaTarefas);
+botaoRemover.addEventListener('click', removeTudo);
 
-const clearTasks = document.querySelector('#apaga-tudo');
-const removeCompletedButton = document.querySelector('#remover-finalizados');
-const createTask = document.querySelector('#criar-tarefa');
-
-createTask.addEventListener('click', addTask);
-clearTasks.addEventListener('click', clearTasks);
-removeCompletedButton.addEventListener('click', removeCompleted);
-
-function changeCompletedTask(event) {
+function tarefaCompleta(event) {
   if (event.target.className === 'completed selected') {
     event.target.classList.remove('completed');
   } else {
@@ -15,16 +14,17 @@ function changeCompletedTask(event) {
   }
 }
 
-function changeSelectedTask(event) {
-  const selectedTask = document.querySelector('.selected');
-  if (selectedTask) {
-    selectedTask.classList.remove('selected');
+// guarda as informações que são mandadas// 
+function tarefaSelecionada(event) {
+  const selecionarTarefa = document.querySelector('.selected');
+  if (selecionarTarefa) {
+    selecionarTarefa.classList.remove('selected');
   }
   event.target.classList.add('selected');
-}
+}  
 
-function addTask(event, taskName, className) {
-  const taskList = document.querySelector('#lista-tarefas');
+function criaTarefas(event, taskName, className) {
+  const listadeTarefas = document.querySelector('#lista-tarefas');
   const listItem = document.createElement('li');
   if (!taskName) {
     const task = document.querySelector('#texto-tarefa');
@@ -35,17 +35,23 @@ function addTask(event, taskName, className) {
     listItem.className = className;
   }
   listItem.innerText = taskName;
-  listItem.addEventListener('click', changeSelectedTask);
-  listItem.addEventListener('dblclick', changeCompletedTask);
-  taskList.appendChild(listItem);
+  listItem.addEventListener('click', tarefaSelecionada);
+  listItem.addEventListener('dblclick', tarefaCompleta);
+  listadeTarefas.appendChild(listItem);
 }
 
-function clearTasks() {
-  const taskList = document.querySelector('#lista-tarefas');
-  while (taskList.firstElementChild)  {
-    taskList.removeChild(taskList.firstElementChild);
+function limpaTarefas() {
+  const listadeTarefas = document.querySelector('#lista-tarefas');
+  while (listadeTarefas.firstElementChild) {
+    listadeTarefas.removeChild(listadeTarefas.firstElementChild);
   }
 }
 
-function removeCompleted() {
-  const taskList = document.querySelector('#lista-tarefas');
+function removeTudo() {
+  const listadeTarefas = document.querySelector('#lista-tarefas');
+  const listaTarefaCompleta = document.querySelectorAll('completed');
+  for (let index = 0; index < listaTarefaCompleta.length; index += 1) {
+    listadeTarefas.removeChild(listaTarefaCompleta[index]);
+  }
+}
+

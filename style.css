@@ -1,5 +1,6 @@
 #criar-tarefa {
-    background-color: white;
+    color: bl;
+    background-color: green;
 }
 
 .completed {
@@ -7,13 +8,14 @@
 }
 
 #body {
-    background-color: chartreuse;
+    background-color: white;
 }
 
 #funcionamento {
+    color:black;
     
 }
 
 .selected {
-    background-color: green;
-  }
+  color: rgb(128,128,128);
+}
