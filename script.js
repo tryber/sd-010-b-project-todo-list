@@ -17,6 +17,14 @@ function addNewTask() { //cria lista de tarefas apertando botao
 
       getTaskList.appendChild(newLi);
       getInputField.value = '';
+      newLi.addEventListener('click', function(event){
+        //pintar a li de cinza e despintar as outras se houver
+        let selected = document.querySelector('.selected')
+        if (selected != null) {
+          selected.classList.remove('selected')
+        }
+        event.target.classList.add('selected')
+      })
     } 
     
   })

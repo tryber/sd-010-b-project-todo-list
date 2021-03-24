@@ -3,3 +3,11 @@
   height: 30px;
 }
 
+li {
+  background-color: white;  
+  cursor:cell;
+}
+
+.selected {
+  background-color: rgb(128, 128, 128);
+}
