@@ -12,33 +12,23 @@ adicionadoLista();
 
 function listaColorida () {
   let corLista = document.querySelector('#lista-tarefas');
-  corLista.addEventListener("click", function (evento) {
-      evento.target.style.background = 'rgb(128, 128, 128)';
+  corLista.addEventListener("click", function (event) {
+    let buscaCor = document.querySelector('.cor');
+
+    if (buscaCor) {
+      buscaCor.classList.remove('cor');
+      event.target.classList.add('cor');
+    } else {
+      event.target.classList.add('cor');
+    }
   })
 }
 listaColorida();
 
-function mudancaCor(){
+const riscaLista = () => {
   let corLista = document.querySelector('#lista-tarefas');
-  corLista.addEventListener("click", function (evento) {
-    let elementCor = document.querySelector('.cor');
-    if (elementCor) {
-      elementCor.classList.remove('cor');
-    }
-    evento.target.classList.add('cor');
-  });
+  corLista.addEventListener('dblclick', (event) => {
+    event.target.classList.toggle('completed');
+  })
 }
-mudancaCor();
-
-function riscarLista () {
-  let corLista = document.querySelector('#lista-tarefas');
-  corLista.addEventListener("dblclick", function (evento) {
-      let itemRiscado = document.querySelector('.completed'); 
-      if (itemRiscado) {
-        itemRiscado.classList.remove('completed');
-      } else {
-          evento.target.classList.add('completed'); 
-      }
-  });
-} 
-riscarLista();
+riscaLista();
