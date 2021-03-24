@@ -32,3 +32,15 @@ const riscaLista = () => {
   })
 }
 riscaLista();
+
+const apagaLista = () => {
+  let apagar = document.querySelector('#apaga-tudo');
+  apagar.addEventListener('click', (event) => {
+   let filhos = document.querySelectorAll('#lista-tarefas li')
+    let pai = document.querySelector('#lista-tarefas');
+    for (let i = 0; i < filhos.length; i += 1) {
+      pai.removeChild(filhos[i])
+    }
+  })
+}
+apagaLista()
