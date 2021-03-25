@@ -57,3 +57,20 @@ const apagaRiscadoLista = () => {
   })
 }
 apagaRiscadoLista();
+
+const listaTarefas = document.querySelector('#lista-tarefas')
+const botaoSalvar = document.querySelector('#salvar-tarefas');
+
+function salvarDados() {
+  const itensSalvar = listaTarefas.innerHTML;
+  localStorage.setItem('Salvo', itensSalvar);
+}
+
+function recuperaDados() {
+  const getSave = localStorage.getItem('Salvo');
+  listaTarefas.innerHTML = getSave;
+}
+
+botaoSalvar.addEventListener('click', salvarDados);
+
+recuperaDados();
