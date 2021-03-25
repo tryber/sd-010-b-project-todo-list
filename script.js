@@ -74,3 +74,25 @@ function recuperaDados() {
 botaoSalvar.addEventListener('click', salvarDados);
 
 recuperaDados();
+
+function moveCima() {
+  const botaoCima = document.querySelector('#mover-cima');
+  botaoCima.addEventListener('click', function () {
+    const selecionar = document.querySelector('.cor');
+    if (selecionar && selecionar.previousElementSibling) {
+      selecionar.parentNode.insertBefore(selecionar, selecionar.previousElementSibling);
+    }
+  });
+}
+moveCima();
+
+function moveBaixo() {
+  const botaoBaixo = document.querySelector('#mover-baixo');
+  botaoBaixo.addEventListener('click', function () {
+    const selecionar = document.querySelector('.cor');
+    if (selecionar && selecionar.nextElementSibling) {
+      selecionar.parentNode.insertBefore(selecionar.nextElementSibling, selecionar);
+    }
+  });
+}
+moveBaixo();
