@@ -115,3 +115,4 @@ btnMoverCima.addEventListener('click', moverParaCima);
 btnMoverBaixo.addEventListener('click', moverParaBaixo);
 
 btnRemover.addEventListener('click', removerSelecionado);
+teste
