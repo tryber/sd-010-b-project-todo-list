@@ -1,7 +1,7 @@
 const botaoCriarTarefas = document.querySelector('#criar-tarefa');
 const botaoLimparTarefas = document.querySelector('#apaga-tudo');
 const botaoRemover = document.querySelector('#remover-finalizados');
- 
+
 botaoCriarTarefas.addEventListener('click', criaTarefas);
 botaoLimparTarefas.addEventListener('click', limpaTarefas);
 botaoRemover.addEventListener('click', removeTudo);
@@ -54,4 +54,3 @@ function removeTudo() {
     listadeTarefas.removeChild(listaTarefaCompleta[index]);
   }
 }
-

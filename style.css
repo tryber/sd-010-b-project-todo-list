@@ -1,5 +1,5 @@
 #criar-tarefa {
-    color: bl;
+    color: black;
     background-color: green;
 }
 
@@ -12,10 +12,9 @@
 }
 
 #funcionamento {
-    color:black;
-    
+    color: black;
 }
 
 .selected {
-  color: rgb(128,128,128);
+    color: rgb(128, 128, 128);
 }
