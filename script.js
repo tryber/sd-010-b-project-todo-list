@@ -1,10 +1,12 @@
 const adicionarTarefa = document.getElementById('criar-tarefa'); // botão para adicionar tarefa
 const tagOL = document.getElementById('lista-tarefas');
-const apagarBTT = document.getElementById('apaga-tudo');
-let maxLinhas = document.getElementsByTagName('li');
-let textoASerAdicionado = document.getElementById('texto-tarefa'); // texto que vai ser adicionado
+const apagarTudoBTT = document.getElementById('apaga-tudo');
+const apagarTudoRiscado = document.getElementById('remover-finalizados');
+const maxLinhas = document.getElementsByTagName('li');
+const textoASerAdicionado = document.getElementById('texto-tarefa'); // texto que vai ser adicionado
+const savePoint = document.getElementById('salvar-tarefas');
 
-// cria um LI dentro do OL e apaga oq tinha dentro do texto 
+// cria um LI dentro do OL e apaga oq tinha dentro do texto
 function criarLinha() {
   const tagLinhaLista = document.createElement('li');
   tagLinhaLista.innerText = textoASerAdicionado.value;
@@ -31,17 +33,45 @@ function riscaLinha() {
 riscaLinha();
 // apaga todos os LI que existem dentro de tagOL
 function apagaLista() {
-  apagarBTT.addEventListener('click', () => {
+  apagarTudoBTT.addEventListener('click', () => {
     tagOL.innerHTML = '';
   });
 }
 apagaLista();
-
-/*
-function riscarLinha() {
-  paiLista.addEventListener('dblclick', function (event) {
-    event.target.classList.toggle('completed');
+// apaga todos riscados
+function apagaRiscados() {
+  apagarTudoRiscado.addEventListener('click', () => {
+    const completos = document.querySelectorAll('.completed');
+    for (let i = 0; i < maxLinhas.length; i += 1) {
+      tagOL.removeChild(completos[i]);
+    }
   });
+}
+apagaRiscados();
+// salvar lista
+function salvamento() {
+  const salvarLI = tagOL.innerHTML;
+  localStorage.listaSalva = salvarLI;
+  alert('Viwer: Manda um salve invertido \n Eu: evlas');
+}
+// carega lista
+function carregarListaSalva() {
+  if (localStorage.listaSalva) {
+    tagOL.innerHTML = localStorage.listaSalva;
+  }
+}
+carregarListaSalva();
+/*
+function apagaFinalizados() {
+  botaoRemoverFinalizados.addEventListener('click', function () {
+    let finalizados = document.querySelectorAll('li.completed');
+    for (let index = 0; index < finalizados.length; index += 1) {
+      paiLista.removeChild(finalizados[index]);
+    }
+  })
+}
+
+apagaFinalizados();
 */
 adicionarTarefa.addEventListener('click', criarLinha);
-algumavariavel.addEventListener('dblclick', riscaLinha);
+savePoint.addEventListener('click', salvamento);
