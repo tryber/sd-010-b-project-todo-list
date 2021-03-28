@@ -25,15 +25,9 @@ function addNewTask() { //cria lista de tarefas apertando botao
         event.target.classList.add('selected')
       })
       newLi.addEventListener('dblclick', function(event){
-        let completed = document.querySelector('.completed')
-        event.target.classList.add('completed')
-        if (completed != null) {
-          newLi.addEventListener('dblclick' , function(event) {
-            event.target.classList.remove('completed')
-          })
-        }
+        event.target.classList.toggle('completed')
       })
-      
+    
     }    
       
   })
