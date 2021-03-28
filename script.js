@@ -25,7 +25,7 @@ function addNewTask() { //cria lista de tarefas apertando botao
         event.target.classList.toggle('completed')
       })
       eraseAllButton.addEventListener('click', function(event) {
-        newLi.innerText = ''  
+        getTaskList.removeChild(newLi)
       })
     }    
       
