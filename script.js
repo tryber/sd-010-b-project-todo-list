@@ -1,10 +1,14 @@
+const selected = document.querySelector('.selected')
+const completed = document.querySelector('.completed')
 function addNewTask() { //cria lista de tarefas apertando botao
   const getInputField = document.querySelector('#texto-tarefa'); 
   const addInputButton = document.querySelector('#criar-tarefa');
   const getTaskList = document.querySelector('#lista-tarefas');
-  const eraseAllButton = document.querySelector('#apaga-tudo')
-  const eraseFinished = document.querySelector('#remover-finalizados')
-  const eraseSelected = document.querySelector('#remover-selecionado')
+  const eraseAllButton = document.querySelector('#apaga-tudo');
+  const eraseFinished = document.querySelector('#remover-finalizados');
+  const eraseSelected = document.querySelector('#remover-selecionado');
+  const selected = document.querySelector('.selected');
+  const completed = document.querySelector('.completed');
 
   
 
@@ -31,11 +35,17 @@ function addNewTask() { //cria lista de tarefas apertando botao
       })
       eraseFinished.addEventListener('click', function(event){
         let completed = document.querySelector('.completed');
-         completed.remove();
+          if (completed != null) {
+            completed.remove();
+          }
+         
       })
       eraseSelected.addEventListener('click', function(event){
-        let selected = document.querySelector('.selected')
-        selected.remove();
+        let selected = document.querySelector('.selected');
+          if (selected != null) {
+            selected.remove();
+          }
+        
       })
     }    
       
