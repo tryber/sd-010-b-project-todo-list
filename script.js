@@ -4,6 +4,7 @@ function addNewTask() { //cria lista de tarefas apertando botao
   const getTaskList = document.querySelector('#lista-tarefas');
   const eraseAllButton = document.querySelector('#apaga-tudo')
   const eraseFinished = document.querySelector('#remover-finalizados')
+  const eraseSelected = document.querySelector('#remover-selecionado')
 
   
 
@@ -31,6 +32,10 @@ function addNewTask() { //cria lista de tarefas apertando botao
       eraseFinished.addEventListener('click', function(event){
         let completed = document.querySelector('.completed');
          completed.remove();
+      })
+      eraseSelected.addEventListener('click', function(event){
+        let selected = document.querySelector('.selected')
+        selected.remove();
       })
     }    
       
