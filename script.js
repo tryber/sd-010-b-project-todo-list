@@ -63,13 +63,10 @@ function carregarListaSalva() {
 }
 carregarListaSalva();
 // apaga os selecionados
-function apagaSelecionados(event) {
+function apagaSelecionados() {
   const selecionado = document.querySelector('.fundo-colorido');
   for (let i = 0; i < maxLinhas.length; i += 1) {
-    tagOL.removeChild(maxLinhas[i]);
-    if (selecionado != null) {
-      document.querySelector('.fundo-colorido').classList.remove('fundo-colorido');
-    }
+    tagOL.removeChild(selecionado);
   }
 }
 
