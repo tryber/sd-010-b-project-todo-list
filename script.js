@@ -5,6 +5,7 @@ const apagarTudoRiscado = document.getElementById('remover-finalizados');
 const maxLinhas = document.getElementsByTagName('li');
 const textoASerAdicionado = document.getElementById('texto-tarefa'); // texto que vai ser adicionado
 const savePoint = document.getElementById('salvar-tarefas');
+const apagaSelecionado = document.getElementById('remover-selecionado');
 
 // cria um LI dentro do OL e apaga oq tinha dentro do texto
 function criarLinha() {
@@ -61,17 +62,17 @@ function carregarListaSalva() {
   }
 }
 carregarListaSalva();
-/*
-function apagaFinalizados() {
-  botaoRemoverFinalizados.addEventListener('click', function () {
-    let finalizados = document.querySelectorAll('li.completed');
-    for (let index = 0; index < finalizados.length; index += 1) {
-      paiLista.removeChild(finalizados[index]);
+// apaga os selecionados
+function apagaSelecionados(event) {
+  const selecionado = document.querySelector('.fundo-colorido');
+  for (let i = 0; i < maxLinhas.length; i += 1) {
+    tagOL.removeChild(maxLinhas[i]);
+    if (selecionado != null) {
+      document.querySelector('.fundo-colorido').classList.remove('fundo-colorido');
     }
-  })
+  }
 }
 
-apagaFinalizados();
-*/
 adicionarTarefa.addEventListener('click', criarLinha);
 savePoint.addEventListener('click', salvamento);
+apagaSelecionado.addEventListener('click', apagaSelecionados)
