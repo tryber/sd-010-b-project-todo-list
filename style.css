@@ -5,7 +5,7 @@
 
 li {
   background-color: white;  
-  cursor:cell;
+  cursor: cell;
 }
 
 .selected {
@@ -13,5 +13,5 @@ li {
 }
 
 .completed {
-  text-decoration: line-through;
+  text-decoration: line-through solid rgb(0, 0, 0);
 }
