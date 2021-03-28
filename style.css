@@ -1,0 +1,17 @@
+#criar-tarefa {
+  width: 60px;
+  height: 30px;
+}
+
+li {
+  background-color: white;
+  cursor: cell;
+}
+
+.selected {
+  background-color: rgb(128, 128, 128);
+}
+
+.completed {
+  text-decoration: line-through solid rgb(0, 0, 0);
+}
