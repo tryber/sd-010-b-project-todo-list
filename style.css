@@ -1,0 +1,11 @@
+li {
+  cursor: pointer;
+}
+
+.fundo-colorido {
+  background-color: gray;
+}
+
+.completed {
+  text-decoration: line-through;
+}
