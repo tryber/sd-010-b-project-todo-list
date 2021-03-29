@@ -1,32 +1,7 @@
-.gray {
-    background-color: gray;
-  }
-  
-  .completed {
-    text-decoration: line-through solid black;
-  }
-  
-  main {
-    width: 600px;
-    margin-left: 35px;
-    margin-top: 0;
-    border-radius: 15px;
-    text-align: left;
-    padding: 100px;
-    background-color: cyan;
-  }
-  
-  Input, button {
-    background-color: white;
-    color: black;
-    font-weight: 800;
-  }
-  
-  h1, p {
-    font-weight: bolder;
-  }
-  
-  body {
-    background-color: lightgray;
-    padding: 80px;
-  }
+.selecionado {
+  background-color: gray;
+}
+
+.completed {
+  text-decoration: line-through solid black;
+}
