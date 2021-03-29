@@ -27,8 +27,13 @@ function criaLista() {
     })
     li.addEventListener("dblclick", function(){
         li.className = "completed";
-
-        console.log(li);
+        
+       console.log(li);
+        
+        
+       
+       
+        
         })
         
  }
@@ -68,5 +73,15 @@ function salvar () {
 
 }
 
+let clickButton4 = document.getElementById("remover-selecionado");
+clickButton4.addEventListener("click", apagarselecionado);
            
+function apagarselecionado () {
+    let estarselecionado = document.querySelectorAll('li');
+    for (let i = 0; i < estarselecionado.length; i++) {
+        if (estarselecionado[i].className === "cinza selected")
+        estarselecionado[i].remove();
+    }
+    console.log(estarselecionado);
+    }
 
