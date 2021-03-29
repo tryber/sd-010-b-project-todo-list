@@ -32,24 +32,24 @@ function criaLista() {
        else {
            li.className = "";
        }
+       console.log(li);
         })
-        let clickButton1 = document.getElementById("apaga-tudo");
-        clickButton1.addEventListener("click", apagar);
-        let listaitens = document.getElementsByTagName("li");
-        function apagar() {
-            for(let index = 0; index < listaitens.length; index +=1) {
 
-            let element = listaitens[index]
-            element.removeChild[index];
+ }
 
-            }   
+      let clickButton1 = document.getElementById("apaga-tudo");
+      clickButton1.addEventListener("click", apagar);
+      
+      function apagar () {
+   let eraseList = document.querySelectorAll('li');
+   for (let i = 0; i < eraseList.length; i++) {
+    eraseList[i].remove();
+}
+
+
+         }
+
+
+
            
-
-            
-
-
-        }
-    }
-
-
 
