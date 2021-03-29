@@ -83,8 +83,7 @@ function moverParaCima() {
   const listaArray = document.getElementsByTagName('li');
   for (let index = 0; index < listaArray.length; index += 1) {
     if (
-      index !== 0 &&
-      listaArray[index].classList.value.includes('selecionado')
+      index !== 0 && listaArray[index].classList.value.includes('selecionado')
     ) {
       const temp = listaArray[index].outerHTML;
       listaArray[index].outerHTML = listaArray[index - 1].outerHTML;
@@ -100,8 +99,7 @@ function moverParaBaixo() {
   const t = listaArray.length;
   for (let index = t - 1; index >= 0; index -= 1) {
     if (
-      index !== t - 1 &&
-      listaArray[index].classList.value.includes('selecionado')
+      index !== t - 1 && listaArray[index].classList.value.includes('selecionado')
     ) {
       const temp = listaArray[index].outerHTML;
       listaArray[index].outerHTML = listaArray[index + 1].outerHTML;
