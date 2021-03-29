@@ -26,15 +26,11 @@ function criaLista() {
     }
     })
     li.addEventListener("dblclick", function(){
-       if (li.className === "") {
-           li.className = "completed";
-       }
-       else {
-           li.className = "";
-       }
-       console.log(li);
-        })
+        li.className = "completed";
 
+        console.log(li);
+        })
+        
  }
 
       let clickButton1 = document.getElementById("apaga-tudo");
@@ -55,13 +51,22 @@ let estariscado = document.querySelectorAll('li');
 for (let i = 0; i < estariscado.length; i++) {
     if (estariscado[i].className === "completed")
     estariscado[i].remove();
-
-
+}
 }
 
+let clickButton3 = document.getElementById("salvar-tarefas");
+clickButton3.addEventListener("click", salvar);
+
+function salvar () {
+    let salvaritem = document.querySelectorAll('li');
+    for (let i = 0; i < salvaritem.length; i++) {
+    let virarstring = JSON.stringify(salvaritem[i].innerText);
+    localStorage.setItem("lista", virarstring);
+    console.log(virarstring);
+
+    }
+
 }
-
-
 
            
 
