@@ -1,5 +1,5 @@
 .gray {
-    background-color: rgb(128, 128, 128);
+    background-color: gray;
   }
   
   .completed {
@@ -19,7 +19,7 @@
   Input, button {
     background-color: white;
     color: black;
-    font-weight: bolder;
+    font-weight: 800;
   }
   
   h1, p {
