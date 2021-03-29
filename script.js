@@ -25,6 +25,22 @@ function criaLista() {
     }
     }
     })
+    li.addEventListener("dblclick", function(tarefacompleta){
+       if (li.className === "") {
+           li.className = "completed";
+       }
+       else {
+           li.className = "";
+       }
+        })
+        
+
+
+
+
+
+
+
     }
 
 
