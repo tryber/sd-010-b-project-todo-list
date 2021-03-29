@@ -1,5 +1,4 @@
 let clickButton = document.getElementById("criar-tarefa");
-
 clickButton.addEventListener("click", criaLista);
 
 function criaLista() {
@@ -9,6 +8,24 @@ function criaLista() {
     let li = document.createElement('li');
     li.textContent = userlist;
     orderlist.appendChild(li);
-
+    li.className = "cinza";
     document.querySelector('#texto-tarefa').value = "";
-}
+    //Função pintar de cinza
+
+    li.addEventListener("click", function(eventodeorigem) {
+    let botaoclicado = eventodeorigem.target;
+    let classe = document.querySelectorAll(".cinza");    
+    for(let index = 0; index < classe.length; index +=1) {
+    let itemclicado = classe[index]; 
+    if (itemclicado != botaoclicado) {
+        itemclicado.className = "cinza";
+    }
+    else {
+        itemclicado.className = "cinza selected";
+    }
+    }
+    })
+    }
+
+
+
