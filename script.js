@@ -33,14 +33,22 @@ function criaLista() {
            li.className = "";
        }
         })
-        
+        let clickButton1 = document.getElementById("apaga-tudo");
+        clickButton1.addEventListener("click", apagar);
+        let listaitens = document.getElementsByTagName("li");
+        function apagar() {
+            for(let index = 0; index < listaitens.length; index +=1) {
+
+            let element = listaitens[index]
+            element.removeChild[index];
+
+            }   
+           
+
+            
 
 
-
-
-
-
-
+        }
     }
 
 
