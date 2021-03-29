@@ -25,7 +25,7 @@ function criaLista() {
     }
     }
     })
-    li.addEventListener("dblclick", function(tarefacompleta){
+    li.addEventListener("dblclick", function(){
        if (li.className === "") {
            li.className = "completed";
        }
@@ -45,9 +45,21 @@ function criaLista() {
    for (let i = 0; i < eraseList.length; i++) {
     eraseList[i].remove();
 }
+}
+
+let clickButton2 = document.getElementById("remover-finalizados");
+clickButton2.addEventListener("click", apagarriscado);
+
+function apagarriscado () {
+let estariscado = document.querySelectorAll('li');
+for (let i = 0; i < estariscado.length; i++) {
+    if (estariscado[i].className === "completed")
+    estariscado[i].remove();
 
 
-         }
+}
+
+}
 
 
 
