@@ -102,8 +102,18 @@ function salvar () {
     let listadetarefas = document.querySelectorAll('li');
     let array = [];
     for (let i = 0; i < document.querySelectorAll('li').length; i+=1) {
-        array[i] = listadetarefas[i].innerHTML;
+        if (listadetarefas[i].className === "completed") {
+         let palavrariscada = listadetarefas[i].innerHTML;
+        let result = palavrariscada.strike();
+        array[i] = result; }
+
+        if (listadetarefas[i].className !== "completed") {
+
+            array[i] = listadetarefas[i].innerHTML;
+
+        }
     }
+    
     localStorage.setItem('listadetarefas', array);
     }
 
@@ -132,8 +142,21 @@ function apagarselecionado () {
             let salvarTexto = elemento.previousElementSibling.innerText;
             elemento.previousElementSibling.innerText = elemento.innerText;
             elemento.innerText = salvarTexto;
+            if (elemento.classList === "completed"){
             elemento.classList.remove("selected");
+            elemento.classList.remove("completed");
             elemento.previousElementSibling.classList.add("selected");
+            elemento.previousElementSibling.classList.add("completed");}
+            if (elemento.classList !== "completed"){
+                elemento.classList.remove("selected");
+                elemento.previousElementSibling.classList.add("selected");
+                }
+
+
+
+
+            console.log(elemento);
+
 
 
         }
