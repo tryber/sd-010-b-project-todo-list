@@ -63,15 +63,20 @@ let clickButton3 = document.getElementById("salvar-tarefas");
 clickButton3.addEventListener("click", salvar);
 
 function salvar () {
+    let string = [];
+    let stringcorreto = []
     let salvaritem = document.querySelectorAll('li');
-    for (let i = 0; i < salvaritem.length; i++) {
-    let virarstring = JSON.stringify(salvaritem[i].innerText);
-    localStorage.setItem("lista", virarstring);
-    console.log(virarstring);
-
+    for(var i = salvaritem.length; i--; string.unshift(salvaritem[i]))
+    for (let i = 0; i < salvaritem.length; i+=1) {
+    stringcorreto[i] = document.getElementsByTagName('li')[i].textContent;
+    }
+    localStorage.setItem("valor", stringcorreto)
+console.log(localStorage);
+console.log(stringcorreto)  ;  
+console.log(string);
     }
 
-}
+
 
 let clickButton4 = document.getElementById("remover-selecionado");
 clickButton4.addEventListener("click", apagarselecionado);
@@ -82,6 +87,5 @@ function apagarselecionado () {
         if (estarselecionado[i].className === "cinza selected")
         estarselecionado[i].remove();
     }
-    console.log(estarselecionado);
     }
 
