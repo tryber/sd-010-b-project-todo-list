@@ -13,7 +13,7 @@ document.querySelector('ol').appendChild(li);
 }
  }
 }
-
+retornaDados();
 
 
 
