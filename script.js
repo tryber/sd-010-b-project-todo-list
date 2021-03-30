@@ -1,11 +1,3 @@
-const botaoCriarTarefas = document.querySelector('#criar-tarefa');
-const botaoLimparTarefas = document.querySelector('#apaga-tudo');
-const botaoRemover = document.querySelector('#remover-finalizados');
-
-botaoCriarTarefas.addEventListener('click', criaTarefas);
-botaoLimparTarefas.addEventListener('click', limpaTarefas);
-botaoRemover.addEventListener('click', removeTudo);
-
 function tarefaCompleta(event) {
   if (event.target.className === 'completed selected') {
     event.target.classList.remove('completed');
@@ -53,4 +45,21 @@ function removeTudo() {
   for (let index = 0; index < listaTarefaCompleta.length; index += 1) {
     listadeTarefas.removeChild(listaTarefaCompleta[index]);
   }
+}
+
+function addCreateButtonsListeners() {
+  const createTaskButton = document.querySelector('#criar-tarefa');
+  const clearTasksButton = document.querySelector('#apaga-tudo');
+  const removeCompletedButton = document.querySelector('#remover-finalizados');
+  const removeSelectedButton = document.querySelector('#remover-selecionado');
+  const saveTasksButton = document.querySelector('#salvar-tarefas');
+  const taskUpButton = document.querySelector('#mover-cima');
+  const taskDownButton = document.querySelector('#mover-baixo');
+  createTaskButton.addEventListener('click', addTask);
+  clearTasksButton.addEventListener('click', clearTasks);
+  removeCompletedButton.addEventListener('click', removeCompleted);
+  removeSelectedButton.addEventListener('click', removeSelected);
+  saveTasksButton.addEventListener('click', saveTasks);
+  taskUpButton.addEventListener('click', moveTaskUp);
+  taskDownButton.addEventListener('click', moveTaskDown);
 }
