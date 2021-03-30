@@ -2,7 +2,7 @@ let clickButton = document.getElementById("criar-tarefa");
 clickButton.addEventListener("click", criaLista);
 
 function criaLista() {
-    //Função para criar a lista ordenada
+    
     let orderlist = document.querySelector('#lista-tarefas');
     let userlist = document.querySelector('#texto-tarefa').value;
     let li = document.createElement('li');
@@ -10,7 +10,7 @@ function criaLista() {
     orderlist.appendChild(li);
     li.className = "cinza";
     document.querySelector('#texto-tarefa').value = "";
-    //Função pintar de cinza
+    
 
     li.addEventListener("click", function(eventodeorigem) {
     let botaoclicado = eventodeorigem.target;
@@ -26,16 +26,21 @@ function criaLista() {
     }
     })
     li.addEventListener("dblclick", function(){
-        li.className = "completed";
-        
-       console.log(li);
-        
-        
+        let teste = li.className;
+        if (teste === "cinza selected") {
+            li.className = "completed";
+            teste = "completed";
+            console.log(teste);
+        }
+        else if (teste === "completed") {
+            li.className = "";
+            teste = "";
+
+
+        }
        
-       
-        
-        })
-        
+    
+        })     
  }
 
       let clickButton1 = document.getElementById("apaga-tudo");
