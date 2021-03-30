@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Project To Do List</title>
 </head>
 <body id="body">
-    <header>
-        <h1><strong>Minha Lista de Tarefas</strong></h1></header>
-        <main>
+  <header>
+    <h1><strong>Minha Lista de Tarefas</strong></h1>
+  </header>
+  <main>
     <p id="funcionamento">Clique duas vezes em um item para marcá-lo como completo</p>
     <input type="text" id='texto-tarefa' >
     <button id="criar-tarefa">Criar Palavra</button>
     <ol id="lista-tarefas"></ol>
+    <button id="mover-cima">Move Up</button>
+    <button id="mover-baixo">Move Down</button>
+    <button id="salvar-tarefas">Salvar Tarefas</button>
     <button id="remover-finalizados">Remover Tarefas Completas</button>
+    <button id="remover-selecionado">Remover Tarefa Selecionada</button>
     <button id="apaga-tudo" class="button">Apagar Tudo</button>
-    </main>
-    <script src='script.js'></script>  
-
+  </main>
+  <script src='script.js'></script>  
 </body>
 </html>
