@@ -138,3 +138,22 @@ function apagarselecionado () {
 
         }
     }
+
+    let botaobaixo = document.getElementById("mover-baixo");
+    botaobaixo.addEventListener("click", moverbaixo);
+    
+    function moverbaixo () {
+        let elemento = document.querySelector(".selected");
+        if(elemento.nextElementSibling !== null) {
+            let salvarT = elemento.nextSibling.innerText;
+            elemento.nextElementSibling.innerText = elemento.innerText;
+            elemento.innerText = salvarT;
+            elemento.classList.remove("selected");
+            elemento.nextElementSibling.classList.add("selected");
+
+
+
+
+        }
+    }
+
