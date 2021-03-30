@@ -1,4 +1,4 @@
-function tarefaCompleta(event) {
+function tarefaSelecionada(event) {
   if (event.target.className === 'completed selected') {
     event.target.classList.remove('completed');
   } else {
@@ -6,17 +6,16 @@ function tarefaCompleta(event) {
   }
 }
 
-// guarda as informações que são mandadas// 
-function tarefaSelecionada(event) {
-  const selecionarTarefa = document.querySelector('.selected');
-  if (selecionarTarefa) {
-    selecionarTarefa.classList.remove('selected');
+function tarefaCompleta(event) {
+  const selectedTask = document.querySelector('.selected');
+  if (selectedTask) {
+    selectedTask.classList.remove('selected');
   }
   event.target.classList.add('selected');
-}  
+}
 
 function criaTarefas(event, taskName, className) {
-  const listadeTarefas = document.querySelector('#lista-tarefas');
+  const taskList = document.querySelector('#lista-tarefas');
   const listItem = document.createElement('li');
   if (!taskName) {
     const task = document.querySelector('#texto-tarefa');
@@ -29,49 +28,97 @@ function criaTarefas(event, taskName, className) {
   listItem.innerText = taskName;
   listItem.addEventListener('click', tarefaSelecionada);
   listItem.addEventListener('dblclick', tarefaCompleta);
-  listadeTarefas.appendChild(listItem);
+  taskList.appendChild(listItem);
 }
 
-function limpaTarefas() {
-  const listadeTarefas = document.querySelector('#lista-tarefas');
-  while (listadeTarefas.firstElementChild) {
-    listadeTarefas.removeChild(listadeTarefas.firstElementChild);
+function limpaTarefa() {
+  const taskList = document.querySelector('#lista-tarefas');
+  while (taskList.firstElementChild) {
+    taskList.removeChild(taskList.firstElementChild);
   }
 }
 
 function removeTudo() {
-  const listadeTarefas = document.querySelector('#lista-tarefas');
-  const listaTarefaCompleta = document.querySelectorAll('completed');
-  for (let index = 0; index < listaTarefaCompleta.length; index += 1) {
-    listadeTarefas.removeChild(listaTarefaCompleta[index]);
+  const taskList = document.querySelector('#lista-tarefas');
+  const completedTaskList = document.querySelectorAll('.completed');
+  for (let index = 0; index < completedTaskList.length; index += 1) {
+    taskList.removeChild(completedTaskList[index]);
   }
 }
 
-function addCreateButtonsListeners() {
-  const createTaskButton = document.querySelector('#criar-tarefa');
-  const clearTasksButton = document.querySelector('#apaga-tudo');
-  const removeCompletedButton = document.querySelector('#remover-finalizados');
-  const removeSelectedButton = document.querySelector('#remover-selecionado');
-  const saveTasksButton = document.querySelector('#salvar-tarefas');
-  const taskUpButton = document.querySelector('#mover-cima');
-  const taskDownButton = document.querySelector('#mover-baixo');
-  createTaskButton.addEventListener('click', addTask);
-  clearTasksButton.addEventListener('click', clearTasks);
-  removeCompletedButton.addEventListener('click', removeCompleted);
-  removeSelectedButton.addEventListener('click', removeSelected);
-  saveTasksButton.addEventListener('click', saveTasks);
-  taskUpButton.addEventListener('click', moveTaskUp);
-  taskDownButton.addEventListener('click', moveTaskDown);
+function removeSelecionada() {
+  if (document.querySelector('.selected')) {
+    const taskList = document.querySelector('#lista-tarefas');
+    const taskSelected = document.querySelector('.selected');
+    taskList.removeChild(taskSelected);
+  }
 }
 
-function loadTasks() {
+function salvaTarefa() {
+  const taskList = document.querySelector('#lista-tarefas');
+  const tasks = taskList.children;
+  localStorage.clear();
+  for (let index = 0; index < tasks.length; index += 1) {
+    const taskProperties = JSON.stringify([tasks[index].innerText, tasks[index].className]);
+    localStorage.setItem(index, taskProperties);
+  }
+}
+
+function moverCima() {
+  if (document.querySelector('.selected')) {
+    const taskSelected = document.querySelector('.selected');
+    if (taskSelected.previousElementSibling) {
+      const taskUp = taskSelected.previousElementSibling;
+      const taskName = taskSelected.innerText;
+      const taskClass = taskSelected.className;
+      taskSelected.innerText = taskUp.innerText;
+      taskSelected.className = taskUp.className;
+      taskUp.innerText = taskName;
+      taskUp.className = taskClass;
+    }
+  }
+}
+
+function moverBaixo() {
+  if (document.querySelector('.selected')) {
+    const taskSelected = document.querySelector('.selected');
+    if (taskSelected.nextElementSibling) {
+      const taskDown = taskSelected.nextElementSibling;
+      const taskName = taskSelected.innerText;
+      const taskClass = taskSelected.className;
+      taskSelected.innerText = taskDown.innerText;
+      taskSelected.className = taskDown.className;
+      taskDown.innerText = taskName;
+      taskDown.className = taskClass;
+    }
+  }
+}
+
+function criarCarregarBotoes() {
+  const btnCriarTarefa = document.querySelector('#criar-tarefa');
+  const btnLimpaTarefa = document.querySelector('#apaga-tudo');
+  const btnRemoveTudo = document.querySelector('#remover-finalizados');
+  const btnRemoveSelecionada = document.querySelector('#remover-selecionado');
+  const btnSalvaTarefa = document.querySelector('#salvar-tarefas');
+  const btnMoveCima = document.querySelector('#mover-cima');
+  const btnMoveBaixo = document.querySelector('#mover-baixo');
+  btnCriarTarefa.addEventListener('click', criaTarefas);
+  btnLimpaTarefa.addEventListener('click', limpaTarefa);
+  btnRemoveTudo.addEventListener('click', removeTudo);
+  btnRemoveSelecionada.addEventListener('click', removeSelecionada);
+  btnSalvaTarefa.addEventListener('click', salvaTarefa);
+  btnMoveCima.addEventListener('click', moverCima);
+  btnMoveBaixo.addEventListener('click', moverBaixo);
+}
+
+function carregarTarefas() {
   for (let index = 0; index < localStorage.length; index += 1) {
-    const taskProperties = JSON.parse(localStorage.getItem(index));
-    addTask(null, taskProperties[0], taskProperties[1]);
+    const tarefaPropriedade = JSON.parse(localStorage.getItem(index));
+    criaTarefas(null, tarefaPropriedade[0], tarefaPropriedade[1]);
   }
 }
 
 window.onload = function () {
-  addCreateButtonsListeners();
-  loadTasks();
+  criarCarregarBotoes();
+  carregarTarefas();
 };
