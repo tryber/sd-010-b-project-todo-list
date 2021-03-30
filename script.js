@@ -63,3 +63,15 @@ function addCreateButtonsListeners() {
   taskUpButton.addEventListener('click', moveTaskUp);
   taskDownButton.addEventListener('click', moveTaskDown);
 }
+
+function loadTasks() {
+  for (let index = 0; index < localStorage.length; index += 1) {
+    const taskProperties = JSON.parse(localStorage.getItem(index));
+    addTask(null, taskProperties[0], taskProperties[1]);
+  }
+}
+
+window.onload = function () {
+  addCreateButtonsListeners();
+  loadTasks();
+};
