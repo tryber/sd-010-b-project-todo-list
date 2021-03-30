@@ -59,26 +59,7 @@ function criaLista() {
         }
         })  
         
-        //Ultimo Requisito
-        let clickButton = document.getElementById("mover-cima");
-        clickButton.addEventListener("click", movercima);    
 
-        function movercima () {
-            let indice = 0;
-            let lista = document.getElementsByTagName("li");
-            for(let index = 0; index < lista.length; index +=1) {
-                if (li.className == "selected") {
-                indice = index + 1;
-                    
-                }
-                console.log(indice);   
-            }
-
-
-console.log(lista);
-
-
-        }
         
 
 
@@ -140,3 +121,20 @@ function apagarselecionado () {
     }
     }
 
+
+
+    let botaocima = document.getElementById("mover-cima");
+    botaocima.addEventListener("click", movercima);
+
+    function movercima () {
+        let elemento = document.querySelector(".selected");
+        if (elemento.previousElementSibling !== null) {
+            let salvarTexto = elemento.previousElementSibling.innerText;
+            elemento.previousElementSibling.innerText = elemento.innerText;
+            elemento.innerText = salvarTexto;
+            elemento.classList.remove("selected");
+            elemento.previousElementSibling.classList.add("selected");
+
+
+        }
+    }
