@@ -1,0 +1,20 @@
+#criar-tarefa {
+  color: black;
+  background-color: green;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+#body {
+  background-color: white;
+}
+
+#funcionamento {
+  color: black;
+}
+
+.selected {
+  background-color: rgb(128, 128, 128);
+}
