@@ -1,3 +1,24 @@
+//Salvar dados
+function retornaDados() {
+ let dados = localStorage.listadetarefas;
+ if (dados !==undefined) {
+let listadados = dados.split(',');
+for (let i=0; i<listadados.length; i+=1)  {
+let li = document.createElement('li');
+li.className = "item-lista";
+li.innerText = listadados[i];
+document.querySelector('ol').appendChild(li);
+
+
+}
+ }
+}
+
+
+
+
+
+
 let clickButton = document.getElementById("criar-tarefa");
 clickButton.addEventListener("click", criaLista);
 
@@ -35,12 +56,40 @@ function criaLista() {
         else if (teste === "completed") {
             li.className = "";
             teste = "";
+        }
+        })  
+        
+        //Ultimo Requisito
+        let clickButton = document.getElementById("mover-cima");
+        clickButton.addEventListener("click", movercima);    
+
+        function movercima () {
+            let indice = 0;
+            let lista = document.getElementsByTagName("li");
+            for(let index = 0; index < lista.length; index +=1) {
+                if (li.className == "selected") {
+                indice = index + 1;
+                    
+                }
+                console.log(indice);   
+            }
+
+
+console.log(lista);
 
 
         }
-       
-    
-        })     
+        
+
+
+
+
+
+
+
+
+
+
  }
 
       let clickButton1 = document.getElementById("apaga-tudo");
@@ -63,26 +112,23 @@ for (let i = 0; i < estariscado.length; i++) {
     estariscado[i].remove();
 }
 }
+//salvar
 
-let clickButton3 = document.getElementById("salvar-tarefas");
+let clickButton3 = document.querySelector("#salvar-tarefas");
 clickButton3.addEventListener("click", salvar);
 
 function salvar () {
-    let string = [];
-    let stringcorreto = []
-    let salvaritem = document.querySelectorAll('li');
-    for(var i = salvaritem.length; i--; string.unshift(salvaritem[i]))
-    for (let i = 0; i < salvaritem.length; i+=1) {
-    stringcorreto[i] = document.getElementsByTagName('li')[i].textContent;
+    let listadetarefas = document.querySelectorAll('li');
+    let array = [];
+    for (let i = 0; i < document.querySelectorAll('li').length; i+=1) {
+        array[i] = listadetarefas[i].innerHTML;
     }
-    localStorage.setItem("valor", stringcorreto)
-console.log(localStorage);
-console.log(stringcorreto)  ;  
-console.log(string);
+    localStorage.setItem('listadetarefas', array);
     }
 
 
 
+    
 let clickButton4 = document.getElementById("remover-selecionado");
 clickButton4.addEventListener("click", apagarselecionado);
            
