@@ -105,7 +105,7 @@ function salvar () {
         if (listadetarefas[i].className === "completed") {
          let palavrariscada = listadetarefas[i].innerHTML;
         let result = palavrariscada.strike();
-        array[i] = result; }
+        array[i] = <b> + result + </b>; }
 
         if (listadetarefas[i].className !== "completed") {
 
