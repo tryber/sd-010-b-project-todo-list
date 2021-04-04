@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+
+#bgImg {
+  background-image: url(images/bg-body.jpg);
+  width: fit-content;
+  height: fit-content;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#main {
+  margin: 50px;
+  text-align: justify;
+  padding: 15px;
+  color: white;
+  font-family: 'Akaya Telivigala';
+}
+
+#title {
+  font-size: xxx-large;
+}
+
+#funcionamento {
+  font-size: large;
+  margin: 0;
+}
+
+.backgroundItens, #texto-tarefa {
+  background-color: rgba(255, 219, 172, 0.692);
+  width: fit-content;
+  border-radius: 10%;
+}
+
+#texto-tarefa {
+  height: 20px;
+  margin-top: 20px;
+}
+
+
+.completed {
+  text-decoration: line-through solid black;
+}
+
+#lista-tarefas {
+  line-height: 20px;
+  margin: auto;
+  padding-right: 40px;
+  text-align: justify;
+}
+
+#listContainer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: transparent;
+}
+
+.check {
+
+}
