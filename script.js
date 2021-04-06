@@ -16,7 +16,7 @@ const verificaCor = (event) => {
 // Muda a cor do fundo para cinza
 const mudarCor = () => {
   for (let i = 0; i < clickList.length; i += 1) {
-    clickList[i].addEventListener('click',verificaCor);
+    clickList[i].addEventListener('click', verificaCor);
   }
 };
 
