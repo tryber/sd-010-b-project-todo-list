@@ -5,16 +5,6 @@ const clickList = document.getElementsByClassName('liStyle');
 const btnApaga = document.getElementById('apaga-tudo');
 const btnFinalizados = document.getElementById('remover-finalizados');
 
-// Vai adicionando item a lista a cada click
-buton.addEventListener('click', () => {
-  const novaLista = document.createElement('li');
-  novaLista.classList.add('liStyle');
-  lista.appendChild(novaLista).innerText = textInput.value;
-  textInput.value = '';
-  mudarCor();
-  complet();
-});
-
 // Muda a cor do fundo para cinza
 const mudarCor = () => {
   for (let i = 0; i < clickList.length; i += 1) {
@@ -35,6 +25,16 @@ const complet = () => {
   });
 };
 complet();
+
+// Vai adicionando item a lista a cada click
+buton.addEventListener('click', () => {
+  const novaLista = document.createElement('li');
+  novaLista.classList.add('liStyle');
+  lista.appendChild(novaLista).innerText = textInput.value;
+  textInput.value = '';
+  mudarCor();
+  complet();
+});
 
 btnApaga.addEventListener('click', () => {
   lista.innerHTML = '';
