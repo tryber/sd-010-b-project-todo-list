@@ -5,17 +5,18 @@ const clickList = document.getElementsByClassName('liStyle');
 const btnApaga = document.getElementById('apaga-tudo');
 const btnFinalizados = document.getElementById('remover-finalizados');
 
+const verificaCor = (event) => {
+  for (let j = 0; j < clickList.length + 1; j += 1) {
+    if (clickList[j]) {
+      clickList[j].classList.remove('color');
+    }
+    event.target.classList.add('color');
+  }
+};
 // Muda a cor do fundo para cinza
 const mudarCor = () => {
   for (let i = 0; i < clickList.length; i += 1) {
-    clickList[i].addEventListener('click', (event) => {
-      for (let j = 0; j < clickList.length + 1; j += 1) {
-        if (clickList[j]) {
-          clickList[j].classList.remove('color');
-        }
-        event.target.classList.add('color');
-      }
-    });
+    clickList[i].addEventListener('click',verificaCor);
   }
 };
 
