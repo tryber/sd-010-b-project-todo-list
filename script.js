@@ -1,14 +1,13 @@
-let textInput = document.getElementById('texto-tarefa');
-let buton = document.getElementById('criar-tarefa');
-let lista = document.getElementById('lista-tarefas');
-let clickList = document.getElementsByClassName('liStyle');
-let btnApaga = document.getElementById('apaga-tudo');
-let btnFinalizados = document.getElementById('remover-finalizados');
-
+const textInput = document.getElementById('texto-tarefa');
+const buton = document.getElementById('criar-tarefa');
+const lista = document.getElementById('lista-tarefas');
+const clickList = document.getElementsByClassName('liStyle');
+const btnApaga = document.getElementById('apaga-tudo');
+const btnFinalizados = document.getElementById('remover-finalizados');
 
 // Vai adicionando item a lista a cada click
-buton.addEventListener('click', function(){  
-  let novaLista = document.createElement('li');
+buton.addEventListener('click', () => {  
+  const novaLista = document.createElement('li');
   novaLista.classList.add('liStyle');
   lista.appendChild(novaLista).innerText = textInput.value;
   textInput.value = '';  
@@ -17,9 +16,9 @@ buton.addEventListener('click', function(){
 });
 
 // Muda a cor do fundo para cinza
-function mudarCor() {
+const mudarCor = () => {
   for (let i = 0; i <  clickList.length; i++) {
-    clickList[i].addEventListener('click', function() {
+    clickList[i].addEventListener('click', (event) => {
       for (let j = 0; j < clickList.length + 1; j++) {
         if(clickList[j]){
           clickList[j].classList.remove('color');
@@ -28,24 +27,22 @@ function mudarCor() {
       }
     });
   }
-}
-function complet() {
-  lista.addEventListener('dblclick', function(event) {
+};
+
+const complet = () => {
+  lista.addEventListener('dblclick', (event) => {
     event.target.classList.toggle('completed');
   });  
 }
 complet();
 
-btnApaga.addEventListener('click', function() {
+btnApaga.addEventListener('click', () => {
     lista.innerHTML = '';
 });
 
-
-btnFinalizados.addEventListener('click', function(){
+btnFinalizados.addEventListener('click', () => {
   let finalizados = document.querySelectorAll('li.completed');
   for(let i =0; i < finalizados.length; i++) {
     lista.removeChild(finalizados[i]);
   }
 });
-
-
