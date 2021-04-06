@@ -6,24 +6,24 @@ const btnApaga = document.getElementById('apaga-tudo');
 const btnFinalizados = document.getElementById('remover-finalizados');
 
 // Vai adicionando item a lista a cada click
-buton.addEventListener('click', () => {  
+buton.addEventListener('click', () => {
   const novaLista = document.createElement('li');
   novaLista.classList.add('liStyle');
   lista.appendChild(novaLista).innerText = textInput.value;
-  textInput.value = '';  
-  mudarCor();  
+  textInput.value = '';
+  mudarCor();
   complet();
 });
 
 // Muda a cor do fundo para cinza
 const mudarCor = () => {
-  for (let i = 0; i <  clickList.length; i++) {
+  for (let i = 0; i < clickList.length; i += 1) {
     clickList[i].addEventListener('click', (event) => {
-      for (let j = 0; j < clickList.length + 1; j++) {
-        if(clickList[j]){
+      for (let j = 0; j < clickList.length + 1; j += 1) {
+        if (clickList[j]) {
           clickList[j].classList.remove('color');
         }
-        event.target.classList.add('color');   
+        event.target.classList.add('color');
       }
     });
   }
@@ -32,17 +32,17 @@ const mudarCor = () => {
 const complet = () => {
   lista.addEventListener('dblclick', (event) => {
     event.target.classList.toggle('completed');
-  });  
-}
+  });
+};
 complet();
 
 btnApaga.addEventListener('click', () => {
-    lista.innerHTML = '';
+  lista.innerHTML = '';
 });
 
 btnFinalizados.addEventListener('click', () => {
-  let finalizados = document.querySelectorAll('li.completed');
-  for(let i =0; i < finalizados.length; i++) {
+  const finalizados = document.querySelectorAll('li.completed');
+  for (let i = 0; i < finalizados.length; i += 1) {
     lista.removeChild(finalizados[i]);
   }
 });
