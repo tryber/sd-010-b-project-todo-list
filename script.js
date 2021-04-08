@@ -102,6 +102,7 @@ function loadTasks() {
   }
 }
 
+// O que será executado quando a página for carregada
 window.onload = () => {
   loadTasks();
   saveTaskButton.addEventListener('click', saveTasks);
