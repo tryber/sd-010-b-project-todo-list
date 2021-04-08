@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List | Gustavo Cerqueira</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main id="main">
+      <header>
+        <h1 id="title">Minha Lista de Tarefas</h1>
+        <p id="funcionamento">
+          Clique duas vezes em um item para marcá-lo como completo
+        </p>
+      </header>
+      <input type="text" id="texto-tarefa" placeholder="Tarefa"/>
+
+      <button class="button" id="criar-tarefa">Adicionar</button>
+
+      <ol id="lista-tarefas"></ol>
+
+      <button class="button green" id="salvar-tarefas">Salvar tarefas</button>
+      <button class="button yellow" id="mover-cima">UP</button>
+      <button class="button yellow" id="mover-baixo">DOWN</button>
+      <button class="button red" id="remover-selecionado">X</button>
+      <button class="button red" id="apaga-tudo">Limpar lista</button>
+      <button class="button red" id="remover-finalizados">Limpar completas</button>
+      
+      <legend id="legenda">
+        <p><div class="line-through">Tarefa</div> - Tarefa realizada</p>
+        <p><div class="grey">Tarefa</div> - Tarefa selecionada </p>
+      </legend>
+    </main>
+  </body>
+</html>

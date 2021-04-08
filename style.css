@@ -1,0 +1,92 @@
+body {
+  background-color: rgb(63 , 228 , 228);
+  font-family: Montserrat , sans-serif;
+  margin: 0;
+}
+
+#main {
+  background-color: whitesmoke;
+  max-width: 1000px;
+  margin: 10% auto;
+  padding: 50px 50px 20px;
+  border-radius: 40px;
+}
+
+#title , #funcionamento {
+  margin-top: 0;
+}
+
+#funcionamento {
+  font-style: italic;
+}
+
+#texto-tarefa {
+  border: 1px solid rgb(236 , 236 , 236);
+  font-size: 18px;
+  padding: 7px;
+  margin-right: 10px;
+}
+
+.button {
+  background-color: rgb(0 , 161 , 153);
+  color: rgb(237 , 237 , 237);
+  font-size: 18px;
+  padding: 8px 30px;
+  border: none;
+  border-radius: 18px;
+  margin: 0 25px 10px 0;
+  font-weight: 600;
+}
+
+.red {
+  background-color: rgb(172 , 0 , 0);
+}
+
+.yellow {
+  background-color: rgb(255 , 166 , 0);
+}
+
+.green {
+  background-color: green;
+}
+
+#legenda {
+  margin-top: 40px;
+}
+
+.grey {
+  background-color: grey;
+  color: rgb(236 , 236 , 236);
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+.line-through {
+  display: inline-block;
+  padding: 5px 10px;
+  text-decoration: line-through solid black;
+}
+
+.tarefa {
+  width: fit-content;
+  padding: 5px 10px;
+  font-size: 20px;
+}
+
+.selected {
+  background-color: grey;
+  color: rgb(237 , 237 , 237);
+}
+
+.selected::marker {
+  color: black;
+}
+
+.completed {
+  text-decoration: line-through solid black;
+}
+
+/*
+.completed.selected {
+  text-decoration: line-through solid rgb(236 , 236 , 236);
+} */
