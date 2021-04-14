@@ -68,11 +68,11 @@ button {
   font-weight: 600;
 }
 
-#criar-tarefa , #mover-cima , #mover-baixo , #salvar-lista {
+#criar-tarefa , #mover-cima , #mover-baixo , #salvar-tarefas {
   background-color: rgb(111 , 190 , 255);
 }
 
-#criar-tarefa:active , #mover-cima:active , #mover-baixo:active , #salvar-lista:active {
+#criar-tarefa:active , #mover-cima:active , #mover-baixo:active , #salvar-tarefas:active {
   background-color: rgb(88 , 147 , 196);
 }
 
