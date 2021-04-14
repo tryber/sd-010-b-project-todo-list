@@ -54,6 +54,11 @@ clearList.id = 'apaga-tudo';
 clearList.innerHTML = 'Limpar lista';
 main.appendChild(clearList);
 
+const saveTasks = createElement('button');
+saveTasks.id = 'salvar-tarefas';
+saveTasks.innerHTML = 'salvar tarefas';
+main.appendChild(saveTasks);
+
 // Adcionar:
 function addNewTask() {
   button.addEventListener('click', () => {
@@ -102,12 +107,18 @@ const taskList = ordenedList.childNodes;
 
 // Remove finalizados:
 function removeDone() {
+  // clearDone.addEventListener('click', () => {
+  //   for (let i = 0; i < taskList.length; i += 1) {
+  //     if (taskList[i].classList.contains('completed')) {
+  //       taskList[i].remove(taskList);
+  //     }
+  //   }
+  // });
+
+  // Fonte: https://github.com/tryber/sd-010-b-project-todo-list/blob/AlanTanaka-project-to-do-list/
   clearDone.addEventListener('click', () => {
-    for (let i = 0; i < taskList.length; i += 1) {
-      if (taskList[i].classList.contains('completed')) {
-        taskList[i].remove(taskList);
-      }
-    }
+    const tasksDone = document.querySelectorAll('.completed');
+    tasksDone.forEach((task) => task.remove());
   });
 }
 
@@ -122,24 +133,64 @@ function removeTask() {
   });
 }
 
+// Move selecionados pra cima/pra baixo:
 moveDown.addEventListener('click', () => {
   const selected = document.querySelector('.select');
   const lower = selected.nextElementSibling;
-  if (selected) {
+  if (selected && selected !== ordenedList.lastChild) {
     lower.remove(ordenedList);
     selected.insertAdjacentElement('beforebegin', lower);
   }
 });
 
-// Move selecionados pra cima/pra baixo:
 moveUp.addEventListener('click', () => {
   const selected = document.querySelector('.select');
   const upper = selected.previousElementSibling;
-  if (selected) {
+  if (selected && selected !== ordenedList.firstChild) {
     upper.remove(ordenedList);
     selected.insertAdjacentElement('afterend', upper);
   }
 });
+
+// Salva lista de tarefas:
+// Fonte: https://github.com/tryber/sd-010-b-project-todo-list/blob/AlanTanaka-project-to-do-list/
+// Fonte: https://www.w3schools.com/js/js_json_stringify.asp
+// Fonte: https://developer.mozilla.org/pt-BR/docs/Web/API/Storage/setItem
+function saveTaskList() {
+  saveTasks.addEventListener('click', () => {
+    localStorage.clear(); // Limpa o storage anterior;
+    // Cria uma lista de obj com o texto e class referentes a cada item da lista;
+    [...ordenedList.children].map((children, index) => {
+      const taskInfo = {
+        class: children.className,
+        text: children.innerHTML,
+      };
+      // Salva no localstorage: o indice da tarefa(keyName do LS) e seu obj respectivo transformado em string(keyValue do LS);
+      localStorage.setItem(`${index}`, JSON.stringify(taskInfo));
+      return true; // Lint: 'Expected to return a value in arrow function.'
+    });
+  });
+}
+
+// Load da lista salva:
+// Fonte: https://github.com/tryber/sd-010-b-project-todo-list/blob/AlanTanaka-project-to-do-list/
+// FOnte: https://www.w3schools.com/js/js_json_parse.asp
+function loadTaskList() {
+  // localStorage.forEach((task) => {
+  //   const obj = JSON.parse(task);
+  //   const taskLoad = document.createElement('li');
+  //   taskLoad.innerHTML = obj.text;
+  //   taskLoad.classList.add(obj.class);
+  //   ordenedList.appendChild(taskLoad);
+  // });
+  for (let i = 0; i < localStorage.length; i += 1) {
+    const obj = JSON.parse(localStorage[i]);
+    const taskLoad = document.createElement('li');
+    taskLoad.innerHTML = obj.text;
+    taskLoad.className = obj.class;
+    ordenedList.appendChild(taskLoad);
+  }
+}
 
 window.onload = () => {
   addNewTask();
@@ -148,19 +199,8 @@ window.onload = () => {
   clearAll();
   removeDone();
   removeTask();
+  saveTaskList();
+  loadTaskList();
 };
 
 // npm run cypress:open => eveluator job local
-
-// btn up/down:
-// const selected = document.querySelector('.selected');
-// const lower = selected.nextElementSibling;
-// taskList.removeChild(lower);
-// selected.insertAdjacentElement('beforebegin', lower);
-
-// const selected = document.querySelector('.selected');
-//   if (selected && selected.previousSibling) {
-//     const upper = selected.previousSibling;
-//     taskList.removeChild(upper);
-//     selected.insertAdjacentElement('afterend', upper);
-//   }
