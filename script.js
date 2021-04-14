@@ -131,6 +131,7 @@ moveDown.addEventListener('click', () => {
   }
 });
 
+// Move selecionados pra cima/pra baixo:
 moveUp.addEventListener('click', () => {
   const selected = document.querySelector('.select');
   const upper = selected.previousElementSibling;

@@ -65,14 +65,14 @@ button {
 }
 
 #mover-cima , #mover-baixo {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 #criar-tarefa , #mover-cima , #mover-baixo {
   background-color: rgb(111 , 190 , 255);
 }
 
-#criar-tarefa:active , #mover-cima:active, #mover-baixo:active {
+#criar-tarefa:active , #mover-cima:active , #mover-baixo:active {
   background-color: rgb(88 , 147 , 196);
 }
 
