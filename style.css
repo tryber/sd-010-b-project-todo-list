@@ -1,18 +1,11 @@
-@import url(https://fonts.googleapis.com/css?family=Lobster);
-@import url(https://fonts.googleapis.com/css?family=Cookie); 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700); 
-@import url(https://fonts.googleapis.com/css?family=Sancreek);
-
-@import "compass/css3";
-
-@import "compass/css3";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700');
 
 body {
   display: flex;
   flex-flow: column;
   align-items: center;
   background-color:#7671de;
-  font-family:'Open Sans Condensed', sans-serif;
+  font-family: Open Sans Condensed, sans-serif;
 }
 
 #title {
@@ -38,7 +31,7 @@ img {
   align-self:center;
 }
 
-#lista-tarefas{
+#lista-tarefas {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,14 +51,14 @@ img {
 }
 
 .selected {
-  background-color: rgb(129, 187, 189);
+  background-color: rgb(129 , 187 , 189);
 }
 
 .completed {
   text-decoration: line-through;
 }
 
-li{
+li {
   cursor: pointer;
 }
 
@@ -80,7 +73,6 @@ button {
 }
 
 .buttons-header {
-
   display: flex;
   flex-direction: row;
   align-items: center;
