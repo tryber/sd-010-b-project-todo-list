@@ -5,7 +5,7 @@ body {
   flex-flow: column;
   align-items: center;
   background-color: mediumslateblue;
-  font-family: Open Sans Condensed, sans-serif;
+  font-family: fantasy, sans-serif;
 }
 
 #title {
