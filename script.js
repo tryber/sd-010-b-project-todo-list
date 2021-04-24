@@ -142,7 +142,7 @@ function saveTask() {
 
 function clearList() {
   listOrder.innerHTML = '';
-};
+}
 
 bt6.addEventListener('click', clearList);
 
