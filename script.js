@@ -120,22 +120,18 @@ function moveDown() {
 
 bt3.addEventListener('click', moveDown);
 
-const selectList = listOrder.children;
+// const selectList = listOrder.children;
 
-function eraserSelected() {
-  
-    const elemento = document.querySelector('.selected');
-    elemento.parentNode.removeChild(elemento);
-  
+function eraserSelected() {  
+  const elemento = document.querySelector('.selected');
+  elemento.parentNode.removeChild(elemento);
 }
 
 bt4.addEventListener('click', eraserSelected);
 
 function eraserMarked() {
-  
-    const elemento = document.querySelector('.completed');
-    elemento.parentNode.removeChild(elemento);
-  
+  const elemento = document.querySelector('.completed');
+  elemento.parentNode.removeChild(elemento);
 }
 
 bt5.addEventListener('click', eraserMarked);
