@@ -4,8 +4,8 @@ body {
   display: flex;
   flex-flow: column;
   align-items: center;
-  background-color: #7671de;
-  font-family: Open Sans Condensed;
+  background-color: mediumslateblue;
+  font-family: Open Sans Condensed, sans-serif;
 }
 
 #title {
