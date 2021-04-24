@@ -122,7 +122,7 @@ bt3.addEventListener('click', moveDown);
 
 // const selectList = listOrder.children;
 
-function eraserSelected() {  
+function eraserSelected() {
   const elemento = document.querySelector('.selected');
   elemento.parentNode.removeChild(elemento);
 }
@@ -140,7 +140,9 @@ function saveTask() {
   localStorage.setItem('task', listOrder.innerHTML);
 }
 
-const clearList = () => listOrder.innerHTML = '';
+const clearList = () => {
+  return listOrder.innerHTML = '';
+};
 
 bt6.addEventListener('click', clearList);
 
