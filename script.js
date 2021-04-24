@@ -140,8 +140,8 @@ function saveTask() {
   localStorage.setItem('task', listOrder.innerHTML);
 }
 
-const clearList = () => {
-  return listOrder.innerHTML = '';
+function clearList() {
+  listOrder.innerHTML = '';
 };
 
 bt6.addEventListener('click', clearList);
