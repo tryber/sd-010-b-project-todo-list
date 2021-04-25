@@ -123,19 +123,15 @@ bt3.addEventListener('click', moveDown);
 const selectList = listOrder.children;
 
 function eraserSelected() {
-  selecList.forEach (
-    const elemento = document.querySelector('.selected');
-    elemento.parentNode.removeChild(elemento);
- )
+  const elemento = document.querySelector('.selected');
+  selecList.forEach(elemento.parentNode.removeChild(elemento))
 }
 
 bt4.addEventListener('click', eraserSelected);
 
 function eraserMarked() {
-  selecList.forEach (
-    const elemento = document.querySelector('.completed');
-    elemento.parentNode.removeChild(elemento);
-  )
+  const elemento = document.querySelector('.completed');
+  selecList.forEach(elemento.parentNode.removeChild(elemento))
 }
 
 bt5.addEventListener('click', eraserMarked);
