@@ -4,28 +4,28 @@ const taskText = document.getElementById('texto-tarefa');
 
 const checkBackgroundColor = () => {
   const li = document.querySelector('.colorGray');
-  if(li){
+  if (li) {
   li.classList.remove('colorGray');
   }
-}
+};
 
 const taskCompleted = (event) => {
   event.target.classList.toggle('completed');
-}
+};
 
 const selectTask = (event) => {
-  if(event.target.className === 'colorGray'){
+  if (event.target.className === 'colorGray') {
   event.target.classList.remove('colorGray');
   } else {
   checkBackgroundColor();
   event.target.classList.add('colorGray');
   }
-}
+};
 
-const createList = () =>{
+const createList = () => {
   const creatLi = document.createElement('li');
 
-  creatLi.className= '';
+  creatLi.className = '';
   creatLi.innerText = taskText.value;
   taskText.value = '';
 
@@ -35,6 +35,7 @@ const createList = () =>{
   creatLi.addEventListener('click', selectTask);
   taskText.focus();
 };
+
 btnCriarTarefa.addEventListener('click', () => {
   createList();
 });
