@@ -48,14 +48,11 @@ const clearTaskList = () => {
 
 const removeFinished = () => {
   const completeds = document.querySelectorAll('.completed');
-  completeds.forEach((completed) =>
-    completed.parentNode.removeChild(completed)
-  );
+  completeds.forEach((completed) => completed.parentNode.removeChild(completed));
 };
 
 const saveTaskList = () => {
   const getOl = document.querySelector('#lista-tarefas').innerHTML;
-  
   localStorage.setItem('taskList', getOl);
 };
 
@@ -74,20 +71,20 @@ const moveUp = () => {
   const li = document.querySelectorAll('li');
   li.forEach((liSelect, index) => {
     const liBefore = li[index - 1];
-    if (liSelect.classList.contains('colorGray')){
-      liSelect.parentNode.insertBefore(liBefore, liSelect.nextSibling)
+    if (liSelect.classList.contains('colorGray')) {
+      liSelect.parentNode.insertBefore(liBefore, liSelect.nextSibling);
     }
-  });  
+  });
 };
 
 const moveDown = () => {
   const li = document.querySelectorAll('li');
   li.forEach((liSelect, index) => {
     const liAfter = li[index + 1];
-    if (liSelect.classList.contains('colorGray')){
-      liSelect.parentNode.insertBefore(liSelect, liAfter.nextSibling)
+    if (liSelect.classList.contains('colorGray')) {
+      liSelect.parentNode.insertBefore(liSelect, liAfter.nextSibling);
     }
-  });  
+  });
 };
 
 btnCriarTarefa.addEventListener('click', createList);
