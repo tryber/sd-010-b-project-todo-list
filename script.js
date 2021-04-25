@@ -1,7 +1,8 @@
 const taskList = document.getElementById('lista-tarefas');
-const btnCriarTarefa = document.getElementById('criar-tarefa');
 const taskText = document.getElementById('texto-tarefa');
-const btnClearTask = document.getElementById('apaga-tudo');
+const btnCriarTarefa = document.getElementById('criar-tarefa');
+const btnClearTaskList = document.getElementById('apaga-tudo');
+const btnRemoveFinished =document.getElementById('remover-finalizados');
 
 const checkBackgroundColor = () => {
   const li = document.querySelector('.colorGray');
@@ -37,8 +38,17 @@ const createList = () => {
   taskText.focus();
 };
 
+const removeFinished = () => {
+  const completeds = document.querySelectorAll('.completed');
+  completeds.forEach((completed) => {
+    completed.parentNode.removeChild(completed);
+  })
+};
+
 btnCriarTarefa.addEventListener('click', () => {
   createList();
 });
 
-btnClearTask.addEventListener('click', () => taskList.innerHTML = '');
+btnClearTaskList.addEventListener('click', () => taskList.innerHTML = '');
+
+btnRemoveFinished.addEventListener('click',removeFinished);
