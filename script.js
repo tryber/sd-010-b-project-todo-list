@@ -19,11 +19,12 @@ const taskCompleted = (event) => {
 };
 
 const selectTask = (event) => {
-  if (event.target.className === 'colorGray') {
-    event.target.classList.remove('colorGray');
+  const liSelect = event.target;
+  if (liSelect.classList.contains('colorGray')) {
+    liSelect.classList.remove('colorGray');
   } else {
     checkBackgroundColor();
-    event.target.classList.add('colorGray');
+    liSelect.classList.add('colorGray');
   }
 };
 
@@ -42,12 +43,12 @@ const createList = () => {
 };
 
 const clearTaskList = () => {
-  taskList.innerHTML = ''
+  taskList.innerHTML = '';
 };
 
 const removeFinished = () => {
   const completeds = document.querySelectorAll('.completed');
-  completeds.forEach((completed) => 
+  completeds.forEach((completed) =>
     completed.parentNode.removeChild(completed)
   );
 };
@@ -71,10 +72,9 @@ const restoreTaskList = () => {
 
 const moveUp = () => {
   const li = document.querySelectorAll('li');
-  console.log(li);
   li.forEach((liSelect, index) => {
     const liBefore = li[index - 1];
-    if (liSelect.className === 'colorGray'){
+    if (liSelect.classList.contains('colorGray')){
       liSelect.parentNode.insertBefore(liBefore, liSelect.nextSibling)
     }
   });  
@@ -82,10 +82,9 @@ const moveUp = () => {
 
 const moveDown = () => {
   const li = document.querySelectorAll('li');
-  console.log(li);
   li.forEach((liSelect, index) => {
     const liAfter = li[index + 1];
-    if (liSelect.className === 'colorGray'){
+    if (liSelect.classList.contains('colorGray')){
       liSelect.parentNode.insertBefore(liSelect, liAfter.nextSibling)
     }
   });  
