@@ -1,6 +1,7 @@
 const taskList = document.getElementById('lista-tarefas');
 const btnCriarTarefa = document.getElementById('criar-tarefa');
 const taskText = document.getElementById('texto-tarefa');
+const btnClearTask = document.getElementById('apaga-tudo');
 
 const checkBackgroundColor = () => {
   const li = document.querySelector('.colorGray');
@@ -39,3 +40,5 @@ const createList = () => {
 btnCriarTarefa.addEventListener('click', () => {
   createList();
 });
+
+btnClearTask.addEventListener('click', () => taskList.innerHTML = '');
