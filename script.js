@@ -4,6 +4,8 @@ const btnCriarTarefa = document.getElementById('criar-tarefa');
 const btnClearTaskList = document.getElementById('apaga-tudo');
 const btnRemoveFinished = document.getElementById('remover-finalizados');
 const btnSaveTaskList = document.getElementById('salvar-tarefas');
+const btnMoveUp = document.getElementById('mover-cima');
+const btnMoveDown = document.getElementById('mover-baixo');
 
 const checkBackgroundColor = () => {
   const li = document.querySelector('.colorGray');
@@ -67,6 +69,28 @@ const restoreTaskList = () => {
   });
 };
 
+const moveUp = () => {
+  const li = document.querySelectorAll('li');
+  console.log(li);
+  li.forEach((liSelect, index) => {
+    const liBefore = li[index - 1];
+    if (liSelect.className === 'colorGray'){
+      liSelect.parentNode.insertBefore(liBefore, liSelect.nextSibling)
+    }
+  });  
+};
+
+const moveDown = () => {
+  const li = document.querySelectorAll('li');
+  console.log(li);
+  li.forEach((liSelect, index) => {
+    const liAfter = li[index + 1];
+    if (liSelect.className === 'colorGray'){
+      liSelect.parentNode.insertBefore(liSelect, liAfter.nextSibling)
+    }
+  });  
+};
+
 btnCriarTarefa.addEventListener('click', createList);
 
 btnClearTaskList.addEventListener('click', clearTaskList);
@@ -74,6 +98,9 @@ btnClearTaskList.addEventListener('click', clearTaskList);
 btnRemoveFinished.addEventListener('click', removeFinished);
 
 btnSaveTaskList.addEventListener('click', saveTaskList);
+
+btnMoveUp.addEventListener('click', moveUp);
+btnMoveDown.addEventListener('click', moveDown);
 
 window.onload = () => {
   restoreTaskList();
