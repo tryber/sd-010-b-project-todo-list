@@ -7,7 +7,7 @@ const btnRemoveFinished =document.getElementById('remover-finalizados');
 const checkBackgroundColor = () => {
   const li = document.querySelector('.colorGray');
   if (li) {
-  li.classList.remove('colorGray');
+    li.classList.remove('colorGray');
   }
 };
 
@@ -17,10 +17,10 @@ const taskCompleted = (event) => {
 
 const selectTask = (event) => {
   if (event.target.className === 'colorGray') {
-  event.target.classList.remove('colorGray');
+    event.target.classList.remove('colorGray');
   } else {
-  checkBackgroundColor();
-  event.target.classList.add('colorGray');
+    checkBackgroundColor();
+    event.target.classList.add('colorGray');
   }
 };
 
@@ -38,17 +38,21 @@ const createList = () => {
   taskText.focus();
 };
 
+const clearTaskList = () => {
+  taskList.innerHTML = ''
+}
+
 const removeFinished = () => {
   const completeds = document.querySelectorAll('.completed');
-  completeds.forEach((completed) => {
-    completed.parentNode.removeChild(completed);
-  })
+  completeds.forEach((completed) => 
+    completed.parentNode.removeChild(completed)
+  );
 };
 
 btnCriarTarefa.addEventListener('click', () => {
   createList();
 });
 
-btnClearTaskList.addEventListener('click', () => taskList.innerHTML = '');
+btnClearTaskList.addEventListener('click', clearTaskList);
 
-btnRemoveFinished.addEventListener('click',removeFinished);
+btnRemoveFinished.addEventListener('click', removeFinished);
