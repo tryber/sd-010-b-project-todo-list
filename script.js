@@ -2,7 +2,8 @@ const taskList = document.getElementById('lista-tarefas');
 const taskText = document.getElementById('texto-tarefa');
 const btnCriarTarefa = document.getElementById('criar-tarefa');
 const btnClearTaskList = document.getElementById('apaga-tudo');
-const btnRemoveFinished =document.getElementById('remover-finalizados');
+const btnRemoveFinished = document.getElementById('remover-finalizados');
+const btnSaveTaskList = document.getElementById('salvar-tarefas');
 
 const checkBackgroundColor = () => {
   const li = document.querySelector('.colorGray');
@@ -40,7 +41,7 @@ const createList = () => {
 
 const clearTaskList = () => {
   taskList.innerHTML = ''
-}
+};
 
 const removeFinished = () => {
   const completeds = document.querySelectorAll('.completed');
@@ -49,10 +50,31 @@ const removeFinished = () => {
   );
 };
 
-btnCriarTarefa.addEventListener('click', () => {
-  createList();
-});
+const saveTaskList = () => {
+  const getOl = document.querySelector('#lista-tarefas').innerHTML;
+  
+  localStorage.setItem('taskList', getOl);
+};
+
+const restoreTaskList = () => {
+  const getItemsLocalStorage = localStorage.getItem('taskList');
+  const getOl = document.querySelector('#lista-tarefas');
+  getOl.innerHTML = getItemsLocalStorage;
+  const addEventAgainLi = document.querySelectorAll('li'); 
+  addEventAgainLi.forEach((li) => {
+    li.addEventListener('dblclick', taskCompleted);
+    li.addEventListener('click', selectTask);
+  });
+};
+
+btnCriarTarefa.addEventListener('click', createList);
 
 btnClearTaskList.addEventListener('click', clearTaskList);
 
 btnRemoveFinished.addEventListener('click', removeFinished);
+
+btnSaveTaskList.addEventListener('click', saveTaskList);
+
+window.onload = () => {
+  restoreTaskList();
+};
