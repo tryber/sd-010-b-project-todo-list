@@ -7,7 +7,7 @@ const header = document.createElement('header');
 fChild.append(header);
 const title = document.createElement('h1');
 title.id = 'title';
-title.innerHTML = 'TO DO LIST!';
+title.innerHTML = 'Minha Lista de Tarefas';
 
 header.append(title);
 
@@ -23,7 +23,7 @@ inputText.id = 'texto-tarefa';
 fChild.appendChild(inputText);
 
 // Criando lista ordenada
-const listOrder = document.createElement('ul');
+const listOrder = document.createElement('ol');
 listOrder.id = 'lista-tarefas';
 fChild.appendChild(listOrder);
 
