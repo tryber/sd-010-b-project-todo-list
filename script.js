@@ -77,15 +77,15 @@ bt4.id = 'remover-selecionado';
 bt4.innerHTML = 'Remove(selected)';
 
 const bt5 = document.createElement('button');
-bt5.id = 'remover-completo';
+bt5.id = 'remover-finalizados';
 bt5.innerHTML = 'Remove(completed)';
 
 const bt6 = document.createElement('button');
-bt6.id = 'Remove(all)';
+bt6.id = 'apaga-tudo';
 bt6.innerHTML = 'Remove(all)';
 
 const bt7 = document.createElement('button');
-bt7.id = 'save';
+bt7.id = 'salvar-tarefas';
 bt7.innerHTML = 'Save';
 
 btnDirection.append(bt2);
