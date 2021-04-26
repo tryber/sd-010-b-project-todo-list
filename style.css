@@ -1,7 +1,55 @@
+* {
+  
+  font-family: 'Nunito', sans-serif;
+  font-size: large;
+  font-weight: bold;
+}
+
+body {
+  background-color: rgb(4, 107, 107);
+}
+
+h1 {
+  font-family: 'Nunito', sans-serif;
+  color: white;
+}
+
+ol li {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image {
+  width: 80%;
+  background-color: white;
+  margin: 50px auto 0 auto;
+  border-radius: 10px;
+}
+
+.margin {
+  
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .colorGray {
   background-color: gray;
 }
 
 .completed {
   text-decoration: line-through solid black;
+}
+
+#texto-tarefa {
+  width: 50%;
+}
+
+#lista-tarefas {
+  width: 50%;
+}
+
+footer {
+  padding-top: 50px;
+  padding-bottom: 20px;
 }

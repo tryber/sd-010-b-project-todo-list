@@ -6,6 +6,7 @@ const btnRemoveFinished = document.getElementById('remover-finalizados');
 const btnSaveTaskList = document.getElementById('salvar-tarefas');
 const btnMoveUp = document.getElementById('mover-cima');
 const btnMoveDown = document.getElementById('mover-baixo');
+const btnRemoveSelect = document.getElementById('remover-selecionado');
 
 const checkBackgroundColor = () => {
   const li = document.querySelector('.colorGray');
@@ -60,7 +61,7 @@ const restoreTaskList = () => {
   const getItemsLocalStorage = localStorage.getItem('taskList');
   const getOl = document.querySelector('#lista-tarefas');
   getOl.innerHTML = getItemsLocalStorage;
-  const addEventAgainLi = document.querySelectorAll('li'); 
+  const addEventAgainLi = document.querySelectorAll('li');
   addEventAgainLi.forEach((li) => {
     li.addEventListener('dblclick', taskCompleted);
     li.addEventListener('click', selectTask);
@@ -71,7 +72,7 @@ const moveUp = () => {
   const li = document.querySelectorAll('li');
   li.forEach((liSelect, index) => {
     const liBefore = li[index - 1];
-    if (liSelect.classList.contains('colorGray')) {
+    if (liSelect.classList.contains('colorGray') && liBefore) {
       liSelect.parentNode.insertBefore(liBefore, liSelect.nextSibling);
     }
   });
@@ -81,10 +82,17 @@ const moveDown = () => {
   const li = document.querySelectorAll('li');
   li.forEach((liSelect, index) => {
     const liAfter = li[index + 1];
-    if (liSelect.classList.contains('colorGray')) {
-      liSelect.parentNode.insertBefore(liSelect, liAfter.nextSibling);
+    if (liSelect.classList.contains('colorGray') && liAfter) {
+      liSelect.parentNode.insertBefore(liSelect, liAfter.nextElementSibling);
     }
   });
+};
+
+const removeSelect = () => {
+  const select = document.querySelector('.colorGray');
+  if (select) {
+    select.remove();
+  }
 };
 
 btnCriarTarefa.addEventListener('click', createList);
@@ -97,6 +105,8 @@ btnSaveTaskList.addEventListener('click', saveTaskList);
 
 btnMoveUp.addEventListener('click', moveUp);
 btnMoveDown.addEventListener('click', moveDown);
+
+btnRemoveSelect.addEventListener('click', removeSelect);
 
 window.onload = () => {
   restoreTaskList();
