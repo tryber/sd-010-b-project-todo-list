@@ -21,12 +21,12 @@ const taskCompleted = (event) => {
 
 const selectTask = (event) => {
   const liSelect = event.target;
-  if (liSelect.classList.contains('colorGray')) {
-    liSelect.classList.remove('colorGray');
-  } else {
-    checkBackgroundColor();
-    liSelect.classList.add('colorGray');
-  }
+  // if (liSelect.classList.contains('colorGray')) {
+  // liSelect.classList.remove('colorGray');
+  // } else {
+  checkBackgroundColor();
+  liSelect.classList.add('colorGray');
+  // }
 };
 
 const createList = () => {
