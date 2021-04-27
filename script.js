@@ -84,5 +84,11 @@ moveDownBtn.addEventListener('click', () => {
   }
 });
 
+const eraseSelectedBtn = document.getElementById('remover-selecionado');
+eraseSelectedBtn.addEventListener('click', () => {
+  const selectedTask = document.getElementById('selected');
+  if (selectedTask) selectedTask.parentElement.removeChild(selectedTask);
+});
+
 createNewTask();
 putSavedTasks();
