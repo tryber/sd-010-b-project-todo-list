@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+body {
+    padding: 0px auto;
+    margin: 0px auto;
+    font-size: 20px;
+    text-align: center;
+    font-family: Raleway, sans-serif;
+    background-color: #a3b3b38c;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+#main-content {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+h1 {
+    font-size: 50px;
+    font-family: Libre Baskerville, serif;
+}
+
+button {
+    margin: 10px;
+    font-size: 18px;
+    background-color: #73b6b6;
+    border-radius: 5px;
+    padding: 10px;
+    border-style: none;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+button:hover {
+  font-size: 20px;
+  border: solid 1px black;
+}
+
+input {
+    padding: 10px;
+    border-radius: 10px;
+    width: 400px;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+#list {
+  display: flex;
+  justify-content: center;
+  margin-left: -25px;
+  text-align: left;
+  list-style-position: inside;
+}
+
+li {
+  padding: 8px;
+  margin-bottom: 5px;
+  text-align: center;
+  border: solid 1px #01aaaa;
+  background-color: rgb(201, 245, 245);
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  margin-top: 20px;
+}

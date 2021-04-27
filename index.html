@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://use.fontawesome.com/5107df46a5.js"></script>
+    <title>To Do list - Project</title>
+  </head>
+  <body>
+    <div id="main-content">
+      <header>
+        <div class="icon">
+          <i class="fa fa-list" aria-hidden="true"></i>
+        </div>
+        <div id="title">
+          <h1>Minha Lista de Tarefas</h1>
+        </div>
+
+        <div id="funcionamento">
+          <h3>Clique duas vezes em um item para marcá-lo como completo</h3>
+        </div>
+
+        <div>
+          <input type="text" id="texto-tarefa" value="" />
+        </div>
+
+        <div>
+          <button id="criar-tarefa" onclick="criaTarefa()">Adicionar</button>
+          <button id="apaga-tudo" onclick="apagaTodosItens()">Apagar Tudo</button>
+          <button id="remover-finalizados" onclick="removeFinalizados()">Apagar</button>
+        </div>
+
+        <div id="list">
+          <ol id="lista-tarefas"></ol>
+        </div>
+      </header>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>
