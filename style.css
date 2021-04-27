@@ -7,6 +7,10 @@ body {
   text-decoration: line-through;
 }
 
+#selected {
+  background-color: gray;
+}
+
 header {
   background-color: rgb(79 , 123 , 84  );
   height: 100px;
