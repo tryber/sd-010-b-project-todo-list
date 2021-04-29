@@ -1,0 +1,17 @@
+#texto-tarefa {
+  display: inline-block;
+}
+
+#criar-tarefa {
+  width: 100px;
+  height: 20px;
+  border-radius: 5px;
+}
+
+.colorGray {
+  background-color: rgb(128,128,128);
+}
+
+.completed {
+  text-decoration: line-through solid rgb(0, 0, 0);
+} 
