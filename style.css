@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  background-color: rgb(234 , 226 , 183);
+  font-family: Poppins, sans-serif;
+  color: rgb(0 , 48 , 73);
+}
+
+.selectedItem {
+  background-color: gray;
+}
+
+li {
+  max-width: 450px;
+  border-radius: 5px;
+  padding: 3px;
+  padding-left: 10px;
+}
+
+/* the next 2 'ol li' code blocks are from
+https://stackoverflow.com/questions/27833314/how-strike-through-a-bullet-in-list */
+
+/* hides the bullets list */
+ol li {
+  list-style-type: none;
+  counter-increment: item;
+}
+
+/* adds the bullet into string */
+ol li:before {
+  content: counter(item) '. ';
+}
+
+.completed {
+  text-decoration: line-through solid black;
+}
+
+button , input {
+  background-color: dodgerblue;
+  color: white;
+  border-radius: 5px;
+  border: unset;
+  padding: 8px;
+  font-family: Poppins, sans-serif;
+}
+
+input {
+  background-color: white;
+  color: rgb(0 , 48 , 73);
+}
+
+#header {
+  text-align: center;
+}
+
+#main {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 5px solid rgb(0 , 48 , 73);
+  border-radius: 10px;
+}
+
+#criar-tarefa {
+  background-color: rgb(0 , 48 , 73);
+}
+
+#apaga-tudo {
+  background-color: rgb(214 , 40 , 40);
+}
+
+#mover-cima , #mover-baixo {
+  background-color: rgb(247 , 127 , 0);
+}
+
+#remover-finalizados {
+  background-color: rgb(252 , 191 , 73);
+}
+
+#remover-selecionado {
+  background-color: rgb(214 , 40 , 40);
+}
+
+#salvar-tarefas {
+  background-color: rgb(0 , 48 , 73);
+}

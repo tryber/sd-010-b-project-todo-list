@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List | JB</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <h1>Minha Lista de Tarefas</h1>
+    </header>
+    <main id="main">
+        <p id="funcionamento">Clique duas vezes em um item para marcá-lo como completo</p>
+        <input id="texto-tarefa" type="text">
+        <button id="criar-tarefa">Add</button>
+        <ol id="lista-tarefas"></ol>
+        <button id="apaga-tudo" type="reset">Clear Task List</button>
+        <button id="mover-cima">Up</button>
+        <button id="mover-baixo">Down</button>
+        <button id="remover-finalizados" type="reset">Clear Done Tasks</button>
+        <button id="remover-selecionado">Clear Item</button>
+        <button id="salvar-tarefas">Save Tasks</button>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
