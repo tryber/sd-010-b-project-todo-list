@@ -1,0 +1,51 @@
+body {
+  background-color: greenyellow;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#backgroundDiv {
+  background-color: aliceblue;
+  border-radius: 20px;
+  margin-right: 60%;
+}
+
+h1 {
+  padding: 10px;
+  margin: 10px;
+}
+
+button {
+  border-radius: 8px;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+#funcionamento {
+  margin: 10px;
+  margin-left: 20px;
+}
+
+#firstLine , #otherLine {
+  margin-left: 10px;
+  padding: 10px;
+}
+
+#mover-cima , #mover-baixo {
+  background-color: coral;
+}
+
+#criar-tarefa , #remover-finalizados {
+  background-color: aqua;
+}
+
+#remover-selecionado , #apaga-tudo {
+  background-color: crimson;
+}
+
+#salvar-tarefas {
+  background-color: blueviolet;
+}
+
+.completed {
+  text-decoration: line-through black;
+}
